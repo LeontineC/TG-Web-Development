@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opdracht3</title>
+    <style>
+        .transitions {
+            width: 90vw;
+            height: 65vh;
+            border: solid black 2px;
+            margin: 4%;
+            padding-top: 2%;
+
+        }
+
+        /*.transitions:hover .object1:hover, 
+        .object2:hover,
+        .object3:hover,
+        .object4:hover,
+        .object5:hover,
+        .object6:hover{
+            transition-delay: 1;
+        }*/
+
+
+        .object1 {
+            border: solid black 1px;
+            border-radius: 0;
+            text-align: center;
+            width: 5em;
+            margin: .5em;
+            background: white;
+            transition: background-color ease-in 1s;
+            border-radius: 0px ease-in 500ms;
+            -webkit-transition: 2s ease-in-out;
+        }
+
+        .transitions:hover .object1 {
+            background-color: red;
+            border-radius: 50px;
+            transform: translate(80em, 0);
+
+
+        }
+
+        .object2 {
+            border: solid black 1px;
+            border-radius: 0;
+            text-align: center;
+            width: 5em;
+            margin: .5em;
+            background: white;
+            transition: background-color;
+            -webkit-transition: 2s cubic-bezier(.97, .97, .6, .31);
+        }
+
+        .transitions:hover .object2 {
+            background-color: red;
+            border-radius: 25px;
+            transform: translate(80em, 0);
+        }
+
+        .object3 {
+            border: solid black 1px;
+            border-radius: 0;
+            text-align: center;
+            width: 5em;
+            margin: .5em;
+            background: white;
+            transition: background-color;
+            -webkit-transition: 2s cubic-bezier(.32, .9, .13, .93);
+        }
+
+        .transitions:hover .object3 {
+            background-color: red;
+            transform: translate(80em, 0);
+
+        }
+
+        .object4 {
+            border: solid black 1px;
+            border-radius: 0;
+            text-align: center;
+            width: 5em;
+            margin: .5em;
+            background: white;
+            transition: background-color;
+            -webkit-transition: 2s cubic-bezier(.22,1.23,.32,-0.71);
+        }
+
+        .transitions:hover .object4 {
+            background-color: red;
+            transform: translate(80em, 0);
+        }
+
+        .object5 {
+            border: solid black 1px;
+            border-radius: 0;
+            text-align: center;
+            width: 5em;
+            margin: .5em;
+            background: white;
+            transition: background-color;
+            -webkit-transition: 2s cubic-bezier(.81, .50, .06, .67);
+        }
+
+        .transitions:hover .object5 {
+            background-color: red;
+            transform: translate(80em, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="transitions">
+        <div class="object1">
+            <h1>1</h1>
+        </div>
+        <div class="object2">
+            <h1>2</h1>
+        </div>
+        <div class="object3">
+            <h1>3</h1>
+        </div>
+        <div class="object4">
+            <h1>4</h1>
+        </div>
+        <div class="object5">
+            <h1>5</h1>
+        </div>
+    </div>
+</body>
+
+</html>

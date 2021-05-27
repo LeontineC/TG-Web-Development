@@ -1,0 +1,29 @@
+h1 {font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+
+.descendant p {color:blueviolet;}
+
+.childSelector > p {color:red;}
+
+.childSelector + p {color: fuchsia;}
+
+.general ~ h5 {font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+
+a:link {color:goldenrod;}
+a:visited {color:lightblue;}
+a:hover {color:indigo;}
+
+.pseudoElements ::first-letter {color:lightgreen;}
+.pseudoElements ::first-line {background-color: lightseagreen;}
+.pseudoElements ::selection {color:limegreen;}
+
+a[target=_top] {color:maroon;}
+
+[title~=lemons] {border: 10px solid green;}
+
+[class ^="old"] {background-color: mediumturquoise;}
+
+[class $="skies"] {background-color: mediumvioletred;}
+
+[class *="be"] {color:orangered;}
+
+input[type="text"] {background-color: orange;}

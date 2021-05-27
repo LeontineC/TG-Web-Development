@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opdracht5</title>
+    <style>
+        .container {
+            position: relative;
+            background-color: lightblue;
+            width: 60vw;
+            height: 80vh;
+            border: solid black 2px;
+
+        }
+
+        img {
+            border: solid rgb(40, 109, 141) 20px;
+            transition: border .5s linear 1s;
+        }
+
+        .container:hover img {
+            border: solid orange 25px;
+
+        }
+
+
+        .box {
+            position: absolute;
+            width: 23.5em;
+            height: 17em;
+            background-color: rgb(40, 109, 141);
+            top: 1em;
+            left: 19px;
+            transition: 4s;
+        }
+
+        .container:hover .box {
+            transform: rotate(45deg) translateX(20em);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="https://media.giphy.com/media/2FazgxLhFpYv4t93G/giphy.gif">
+        <div class="box">
+            <p></p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opdracht6</title>
+    <style>
+        body {
+            background-color: lightyellow;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .cards {
+            display: flex;
+            margin-left: 3em;
+            height: 60vh;
+            place-items: center;
+            margin-top: 10em;
+            color:black;
+
+        }
+
+        .card {
+            height: 40vh;
+            background-color: mediumseagreen;
+            color: black;
+            border-radius: 3em;
+            padding: 5em;
+            border: 2px solid black;
+            margin-top: 10em;
+            transition: 2s, color 1s;
+
+        }
+
+        .card:not(:first-child) {
+            margin-left: -5em;
+        }
+
+        .c1 {
+            margin-top: 2em;
+            text-align: center;
+
+        }
+
+        .c2 {
+            margin-top: 2em;
+            text-align: center;
+            transition: 1s color;
+
+        }
+
+        
+
+
+        .card:hover {
+            transform: translateY(-5em);
+        }
+
+        .card:hover~.card {
+            transform: translateX(3em);
+            color: beige;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="cards">
+        <div class="card">
+            <div class="c1">
+                <p>♥ ♥ ♥</p>
+                <h2>Canadian recipe #11</h2>
+                <h3>Nanaimo Bars</h3>
+                <h4>has some ingredients</h4>
+                <p>by Anne of Green Gables</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="c2">
+                <p>♥ ♥ ♥</p>
+                <h2>Canadian recipe #11</h2>
+                <h3>Nanaimo Bars</h3>
+                <h4>has some ingredients</h4>
+                <p>by Anne of Green Gables</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="c2">
+                <p>♥ ♥ ♥</p>
+                <h2>Canadian recipe #11</h2>
+                <h3>Nanaimo Bars</h3>
+                <h4>has some ingredients</h4>
+                <p>by Anne of Green Gables</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="c2">
+                <p>♥ ♥ ♥</p>
+                <h2>Canadian recipe #11</h2>
+                <h3>Nanaimo Bars</h3>
+                <h4>has some ingredients</h4>
+                <p>by Anne of Green Gables</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

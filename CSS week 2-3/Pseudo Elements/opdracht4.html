@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opdracht4</title>
+    <style>
+        .container button {
+            position: relative;
+            color: white;
+            background-color: darkcyan;
+            text-align: center;
+            width: 70%;
+            left: 5%;
+            border: none;
+            height: 40px;
+            font-size: 150%;
+            cursor: pointer;
+
+
+        }
+
+        .container button::before {
+
+            position: absolute;
+            content: "";
+            background-color: darkorange;
+            width: 8px;
+            height: 39px;
+            left: -1px;
+            bottom: .2px;
+
+        }
+
+        .container button::after {
+
+            position: absolute;
+            content: "";
+            background-color: darkorange;
+            width: 37px;
+            height: 7px;
+            left: -1px;
+            bottom: 33px;
+
+        }
+
+        .empty {
+            background-color: darkcyan;
+            color: darkcyan;
+            position: relative;
+            width: 20%;
+            left: 900px;
+            bottom: 59px;
+        }
+
+        .empty::before {
+            position: absolute;
+            content: "";
+            background-color: darkorange;
+            width: 7px;
+            height: 40px;
+            right: 63px;
+            top: 19px;
+
+        }
+
+        .empty::after {
+            position: absolute;
+            content: "";
+            background-color: darkorange;
+            width: 37px;
+            height: 8px;
+            right: 64px;
+            top: 51px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button type="button">button</button>
+    </div>
+    <div class="empty">
+        <!--- <h1>content</h1> --->
+    </div>
+</body>
+
+</html>

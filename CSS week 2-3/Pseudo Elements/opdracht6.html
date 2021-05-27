@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opdracht6</title>
+    <style>
+        .bigCircle1 {
+            background-color: black;
+            color: white;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            position: relative;
+        }
+
+        .bigCircle1 h1 {
+            position: relative;
+            top: 30px;
+        }
+
+        .bigCircle1::before {
+            content: ".";
+            background-color: black;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            font-size: 250%;
+            top: 25%;
+            right: 70%;
+            transform: rotate(180deg);
+        }
+
+        .bigCircle1::after {
+            content: ".";
+            background-color: black;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            font-size: 250%;
+            top: 25%;
+            left: 70%;
+        }
+
+        .bigCircle2 {
+            background-color: black;
+            color: white;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            position: relative;
+            left: 15%;
+            bottom: 120px;
+
+        }
+
+        .bigCircle2 h1 {
+            position: relative;
+            top: 30px;
+        }
+
+        .bigCircle2::before {
+            content: ".";
+            background-color: black;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            font-size: 300%;
+            top: 25%;
+            right: 70%;
+            transform: rotate(180deg);
+        }
+
+        .bigCircle2::after {
+            content: ".";
+            background-color: black;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            font-size: 250%;
+            top: 25%;
+            left: 70%;
+        }
+
+
+        .bigCircle3 {
+            background-color: black;
+            color: white;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            position: relative;
+            left: 30%;
+            bottom: 240px;
+        }
+
+        .bigCircle3 h1 {
+            position: relative;
+            top: 30px;
+        }
+
+
+        .bigCircle3::before {
+            content: ".";
+            background-color: black;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            font-size: 250%;
+            top: 25%;
+            right: 70%;
+            transform: rotate(180deg);
+        }
+
+        .bigCircle3::after {
+            content: ".";
+            background-color: black;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            font-size: 250%;
+            top: 25%;
+            left: 70%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bigCircle1">
+        <h1>1</h1>
+    </div>
+    <div class="bigCircle2">
+        <h1>2</h1>
+    </div>
+    <div class="bigCircle3">
+        <h1>3</h1>
+    </div>
+
+</body>
+
+</html>

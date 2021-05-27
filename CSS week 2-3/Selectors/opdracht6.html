@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectors6</title>
+    <style>
+     div  > p {color: pink;}
+     div + p {color: purple;}
+    .general ~ p {color: blue;}
+    </style>
+</head>
+<body>
+    <div>
+       <p>Goldielocks and the three bears</p>
+      </div>  
+    <p>adjacentSelector</p>
+   
+    <div class="general">
+        <p>Jack and the beanstalk</p>
+    </div>
+        <p>beans</p>
+        <p>giants</p>
+        <p>stalks</p>
+    
+</body>
+</html>

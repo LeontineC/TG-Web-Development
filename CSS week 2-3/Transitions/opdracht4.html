@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opdracht4</title>
+    <style>
+        .container {
+            position: relative;
+            background-color: cornflowerblue;
+            border: solid darkblue 2px;
+            width: 90vw;
+            height: 80vh;
+            margin: 3em;
+        }
+
+
+
+        .object1 {
+            position: absolute;
+            text-align: center;
+            width: 4em;
+            height: 4em;
+            border: solid darkblue 1px;
+            font-size: 2em;
+            margin-top: 0;
+            margin-left: 0;
+            transition: margin-top 5s,
+                margin-left 4.9s 1s;
+
+        }
+
+        .container:hover .object1 {
+            margin-top: 5em;
+            margin-left: 20em;
+
+        }
+
+
+
+
+        .object2 {
+            position: absolute;
+            text-align: center;
+            width: 4em;
+            height: 4em;
+            border: solid darkblue 1px;
+            font-size: 2em;
+            margin-top: -.1em;
+            margin-left: 39.1em;
+            transition: margin-top 5s,
+                        margin-left 4.9s 1s;
+           
+        }
+
+        .container:hover .object2 {
+            margin-top: 5em;
+            margin-left: 20em;
+
+        }
+
+        .object3 {
+            position: absolute;
+            text-align: center;
+            width: 4em;
+            height: 4em;
+            border: solid darkblue 1px;
+            font-size: 2em;
+            margin-top: 14.7em;
+            margin-left: 0;
+            transition: margin-left 5s,
+                        margin-top 4.9s 1s;
+
+
+
+
+        }
+
+        .container:hover .object3 {
+            margin-left: 20em;
+            margin-top: 5em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="object1">
+            <p>2</p>
+        </div>
+        <div class="object2">
+            <p>1</p>
+        </div>
+        <div class="object3">
+            <p>3</p>
+        </div>
+    </div>
+</body>
+
+</html>

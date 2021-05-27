@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectors8</title>
+    <style>
+        h1 {color:darkslateblue;}
+        h1 {color:deeppink;}
+        h1 {color:gold;}
+        h2 {color:blue;}
+        .specificity {color:purple;}
+        ul {color:hotpink;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+    </style>
+</head>
+<body>
+    <h1>lets give an example of cascade</h1>
+    <h1>if its the same element but lower in the code</h1>
+    <h1>the latter rules apply</h1>
+    <p>but what if we add some class?</p>
+    <h2>whats more important?</h2>
+    <h2 class="specificity">whichever h2 turns purple</h2>
+    <p>what about inheritance?</p>
+    <ul>
+        <li>shopping list</li>
+        <li>wish list</li>
+    </ul>
+</body>
+</html>
