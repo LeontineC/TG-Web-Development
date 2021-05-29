@@ -1,0 +1,11 @@
+
+
+
+button {background-color: $button-color;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2em;
+    margin: 5em 20em;
+    color: rgb(43, 43, 32);
+    &:hover {background-color: $button-hover-color;
+            box-shadow: 5px 10px 10px 20px rgb(27, 43, 48);
+            transform: translateY(-8px);}}

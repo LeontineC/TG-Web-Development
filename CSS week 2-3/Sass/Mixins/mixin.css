@@ -1,0 +1,28 @@
+.button {
+  background-color: #1d031d;
+  color: #fdcdfd;
+  margin: 5em 20em;
+  border: 3px solid white;
+  border-style: groove;
+  font-size: 2em;
+}
+
+.button:hover {
+  background-color: #fdcdfd;
+  color: #572b0d;
+}
+
+.colorChangingSquare {
+  width: 5em;
+  height: 5em;
+  margin-left: 42em;
+  border: solid #1d031d 2px;
+  background-color: #fdcdfd;
+  -webkit-transition: 4s;
+  transition: 4s;
+}
+
+.colorChangingSquare:hover {
+  background-color: #1d031d;
+}
+/*# sourceMappingURL=mixin.css.map */

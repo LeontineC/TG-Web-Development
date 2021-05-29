@@ -1,0 +1,35 @@
+@mixin button {
+    background-color: rgb(29, 3, 29);
+    color:rgb(253, 205, 253);
+    margin: 5em 20em;
+    border: 3px solid white;
+    border-style: groove;
+    font-size: 2em;
+        &:hover {
+            background-color: rgb(253, 205, 253);
+            color:rgb(87, 43, 13);
+         }
+    }
+
+@mixin transition {
+    width: 5em;
+    height: 5em;
+    margin-left: 42em;
+    border: solid rgb(29, 3, 29) 2px;
+    background-color: rgb(253, 205, 253);
+    transition: 4s;
+    &:hover {
+        background-color:rgb(29, 3, 29);
+    }
+
+}
+
+.button {
+    @include button();
+}
+
+
+
+.colorChangingSquare {
+    @include transition();
+}

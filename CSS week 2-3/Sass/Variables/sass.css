@@ -26,6 +26,10 @@ h1 {
   line-height: 200px;
 }
 
+.banner .slogan:hover {
+  background-color: lightyellow;
+}
+
 .container {
   text-align: center;
   font-family: "Pacifico", cursive;

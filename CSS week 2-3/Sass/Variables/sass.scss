@@ -2,6 +2,7 @@
 
 $translucent-white: rgba(255,255,255,0.3);
 $icon-square-length: 300px;
+$standard-border: 4px solid black;
 
 h1 {
  font-family: Roboto, sans-serif;
@@ -16,7 +17,7 @@ h1 {
  .slogan {  
             position: absolute;
             background-color: $translucent-white;
-            border: 4px solid rgb(0, 0, 0);
+            border: $standard-border;
             top: 200px;
             left: 25%;
             width: 50%;
@@ -24,7 +25,9 @@ h1 {
             text-align: center;
         .span {
                 font-size: 24px;
-                line-height: 200px;}}
+                line-height: 200px;
+                }
+        &:hover {background-color: lightyellow;}}
 }
  
 .container {
@@ -35,8 +38,9 @@ h1 {
             width: $icon-square-length;
             height: $icon-square-length;
             margin: 2%;
-            border: 4px solid black;
+            border: $standard-border;
             font-size: 32px;}
+            
 }
  
  
