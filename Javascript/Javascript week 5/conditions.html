@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Conditions</title>
+</head>
+<body>
+    <script>
+/*3.1*/
+        let x = 4;
+        let y = 8;
+
+/*c*/ if (x==4 && y==8) {
+    console.log("question a");
+}
+
+/*d*/ if (x==4 || y==4) {
+    console.log("question b");
+}
+
+/*e*/ if (x!=4 || y!=8) {
+    console.log("the opposite");
+} else {
+    console.log("results");
+}
+
+/*f*/ if (x!=4 && y!=8) {
+    console.log("the opposite");
+    } else {
+        console.log("results");
+    }
+
+/*g-j*/ let amount = 3;
+        
+ if (amount > 5 && amount < 10) {
+     console.log( amount + " is greater than 5 and less than 10");
+ } else if (amount > 11 && amount < 20) {
+     console.log(amount + " greater than 11 and less than 20");
+ } else if (amount == 21 || amount == 23 ) {
+     console.log( "amount is 21 or 23");
+ } else if (amount < 35 || amount > 40 || amount < 45) {
+     console.log( "amount is less than 35 or between 40 and 45.")
+ }
+
+ /*k*/ let amountTwo = 21;
+
+ if (amountTwo > 5 && amountTwo < 10) {
+     console.log( amountTwo + " is greater than 5 and less than 10");
+ } if (amountTwo > 11 && amountTwo < 20) {
+     console.log(amount + " greater than 11 and less than 20");
+ } if (amountTwo == 21 || amountTwo == 23 ) {
+     console.log( "amount is 21 or 23");
+ } if (amountTwo < 35 || amountTwo > 40 || amountTwo < 45) {
+     console.log( "amount is less than 35 or between 40 and 45.")
+ }
+
+/*3.2*/
+/*a*/
+let cijfer = 20;
+
+if (cijfer ==3) {
+    console.log( "The number is equal to 3");
+} else if (cijfer > 4) {
+    console.log( "The number is larger than 4")
+} else if (cijfer > 11) {
+    console.log("The number is greater than 11");
+} else if (cijfer < 3) {
+    console.log("The number is less than 3");
+}
+
+/*c*/
+
+let month = 3;
+
+if (month == 1) {
+    console.log("It's January.")
+} else if (month == 2) {
+    console.log("It's February.")
+} else if (month == 3) {
+    console.log("It's March.")
+} else if (month == 4) {
+    console.log("It's April.")
+} else if (month == 5) {
+    console.log("It's May.")
+} else if (month == 6) {
+    console.log("It's June.")
+} else if (month == 7) {
+    console.log("It's July.")
+} else if (month == 8) {
+    console.log("It's August.")
+} else if (month == 9) {
+    console.log("It's September.")
+} else if (month == 10) {
+    console.log("It's October.")
+} else if (month == 11) {
+    console.log("It's November.")
+} else if (month == 12) {
+    console.log("It's December.")
+} else {
+    console.log("This is not a valid month!")
+}
+
+/*d*/
+
+let monthOfYear = 6;
+
+switch (monthOfYear) {
+    case 1 :
+    console.log("It's January");
+    break;
+    case 2 :
+    console.log("It's February");
+    break;
+    case 3 :
+    console.log("It's March");
+    break;
+    case 4 :
+    console.log("It's April");
+    break;
+    case 5 :
+    console.log("It's May");
+    break;
+    case 6 :
+    console.log("It's June");
+    break;
+    case 7 :
+    console.log("It's July");
+    break;
+    case 8 :
+    console.log("It's August");
+    break;
+    case 9 :
+    console.log("It's September");
+    break;
+    case 10 :
+    console.log("It's October");
+    break;
+    case 11 :
+    console.log("It's November");
+    break;
+    case 12 :
+    console.log("It's December");
+    break;
+    default: 
+    console.log("This is not a valid month");
+}
+
+/*e*/   let z = 3;
+        let results = x<=4 && x>=0 ?
+        '2':
+        '5';
+        console.log(results);
+
+
+
+    </script>
+</body>
+</html>

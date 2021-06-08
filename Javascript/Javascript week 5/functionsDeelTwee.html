@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions deel twee</title>
+</head>
+
+<body>
+    <!--4.3-->
+    <!--a-->
+    <button id="buttonOne" onclick="ranDom()" type="number">click for a random number</button>
+    <!--4.4-->
+    <p>Who is a member of Zoom Room Six?</p>
+    <input id="members">
+    <button type="button" onclick="trueOrFalseTwo();">Guess</button>
+    <div>
+        <p id="reaction"></p>
+    </div>
+    <script>
+
+        /*a*/
+        ranDom = (x) => {
+            x = Math.floor(Math.random() * 20);
+            document.getElementById("buttonOne").innerHTML = x;
+        }
+
+        /*4.4*/
+        // trueOrFalse = (name, text) => {
+        //     name = document.getElementById("members").value;
+        //     if (name === "Justin" || name === "Rachid" || name === "Mitchell")  {
+        //         text = "That's true";
+        //    }
+        //     else {
+        //         text = "Guess again";
+        //     }
+
+        //  document.getElementById("reaction").innerHTML = text;
+        // } */
+
+
+        trueOrFalse = (name) => {
+            name = document.getElementById("members").value;
+            if (name === "Justin" || name === "Rachid" || name === "Mitchell") {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+        trueOrFalseTwo = () => {
+
+            if (trueOrFalse() === true) {
+                document.getElementById("reaction").innerHTML = "That's true";
+            } else {
+                document.getElementById("reaction").innerHTML = "Guess again";
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

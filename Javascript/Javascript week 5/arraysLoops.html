@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays & Loops</title>
+</head>
+
+<body>
+    <!--5.4-->
+    <div>Some Text</div>
+    <div>Some Text</div>
+
+
+
+    <script>
+        /*a*/
+
+        let one = ['2', '5', '9', '1', '8', '6', '3', '7', '4', '10'];
+        console.log(one);
+        let randomNumber = one[Math.floor(Math.random() * one.length)];
+        console.log(randomNumber);
+
+        /*b c*/
+
+        let fruit = ['apple', 'strawberry', 'blueberry', 'peach', 'melon'];
+        console.log(fruit);
+        console.log(fruit.slice(0, 2));
+
+
+        /*d f*/
+        let randomFruit = fruit[randomNumber % fruit.length];
+        console.log(randomFruit);
+        /*e*/
+        console.log(fruit.length);
+
+
+
+        /*g*/
+        fruit[0] = 'pear';
+        console.log(fruit);
+
+        /*h*/
+        [fruit[0], fruit[1]] = [fruit[1], fruit[0]];
+        console.log(fruit);
+
+        /*5.2*/
+        
+        const dutchSports = ['Voetbal', 'Hockey', 'Schaatsen'];
+
+
+/*a*/ console.log(dutchSports[0]);
+        console.log(dutchSports[1]);
+        console.log(dutchSports[2]);
+
+/*b*/ for (let item of dutchSports) {
+            console.log(item);
+        }
+
+        for (let items in dutchSports) {
+            console.log(items);
+        }
+
+    /*c*/    lotsOfNumbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13',
+            '14', '15', '16', '17', '18', '19', '20'];
+
+        for (let i = 1; i < lotsOfNumbers.length; i += 2) {
+            console.log(lotsOfNumbers[i]);
+        }
+        /*d* turned off because of volume of numbers
+        let loopOne = ['1', '2', '3'];
+        let nestedLoopOne = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
+        let nestedLoopTwo = ['2', '4', '6', '8', '10', '12', '14', '16', '18', '20'];
+        let nestedLoopThree = ['3', '6', '9', '12', '15', '18', '21', '24', '27', '30'];
+
+
+
+        for (let i = 0; i < loopOne.length; i++); {
+        
+            for (let j = 0; j < nestedLoopOne.length; j++) {
+                console.log(nestedLoopOne); {
+                for (let k = 0; k < nestedLoopTwo.length; k++) {
+                    console.log(nestedLoopTwo); {
+
+                    for (let l = 0; l < nestedLoopThree.length; l++) {
+                        console.log(nestedLoopThree);
+                        
+                    }
+                }}}}} */
+
+        /*g*/
+        /* 
+        fibo = [0, 1, 1 , 2, 3];
+        const addUp = fibo.slice(-2);
+        
+        console.log(addUp);
+        fibo.push(addUp[0] 
+        +  addUp[1]);
+        console.log(fibo);
+        
+        */
+
+        fibo = [0, 1];
+        for (let t = 0; t <= 50; t++) {
+            const addUp = fibo.slice(-2);
+            fibo.push(addUp[0] + addUp[1]);
+        };
+        console.log(fibo);
+
+
+
+    /*h*/   arr = [2, 7, 5, 10, 4, 9, 3, 1, 8, 6];
+
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j <= arr.length; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]
+                }
+            }
+        } console.log(arr);
+
+
+     /*5.3*/    const dutchSportsTwo = ['Voetbal', 'Hockey', 'Schaatsen'];
+
+     /*a*/      dutchSportsTwo.push('Zeilen', 'Zwemmen');
+
+      /*b*/     dutchSportsTwo.unshift('Volleyball');
+                
+        
+    /*c*/       const ballSports = dutchSportsTwo.slice(0,2);
+                console.log(ballSports);
+
+    /*d*/       dutchSportsTwo.shift();
+                dutchSportsTwo.shift();
+                
+
+    /*e*/       dutchSportsTwo.sort();
+                console.log(dutchSportsTwo);
+
+    /*f*/       dutchSportsTwo.forEach(element => console.log(element));
+
+    /*g*/       const sportsLength = dutchSportsTwo.length;
+                console.log(sportsLength);
+
+    /*5.4*/     let arrayLike = document.querySelectorAll('div');
+                console.log(arrayLike);
+
+        /*a*/     const newArray = Array.from('arrayLike');
+                    console.log(newArray);
+
+        /*b*/    
+
+        /*c*/   
+
+        /*d*/
+
+        /*e*/
+
+        /*f*/
+
+    /*6.1*/
+
+    /*a*/
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

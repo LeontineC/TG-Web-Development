@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <!--4.1 a -->
+        <button onclick="greetingOne()">click here</button>
+
+    <!--b-->
+        <button id="hello" onclick="greeting()">click here</button>
+        
+        <button id="bye" onclick="greetingTwo()">Goodbye</button>
+        
+        <p>how many jellybeans?</p>
+        <input id="beans">
+        <button type="button" onclick="mineFunction()">click</button>
+        <p id="reaction"></p>
+      
+        <p>choose your favorite flavor</p>
+        <select id="choose" type="text" onchange="inputChange()">
+            <option value=""></option>
+            <option value="orange">orange</option>
+            <option value="lime">lime</option>
+            <option value="lemon">lemon</option>
+        </select>
+       <p id="words"></p>
+       <!--<br>
+        <p>opdracht b</p>
+       <input id="somethingOrOther"> -->
+
+        <!--c-->
+        <p id="question">Which number?</p>
+        <button id="which" onclick="whichNumber()">???</button>
+        <br>
+        <!--d-->
+        <br>
+       <input type="text" id="someNumber">
+       <button onClick="someTypeOfNumber()">Button</button>
+       <p id="result"></p>
+
+       <!--4.2-->
+        <!--i-->
+       <div class="para"><p>Goldilocks and the two bears</p></div>
+       <button onclick="threeBears()">Oops</button>
+
+       <!--ii-->
+       <h1>Veggies</h1>
+       <ul>
+           <li>Cabbage</li>
+           <li>Pineapple</li>
+           <li>Carrot</li>
+       </ul>
+       <button onclick="vegFruit()">Click here</button>
+
+       <!--iii-->
+       <div class="okay">
+           <h1>Okay</h1> 
+        </div>
+        <div class="okay">
+        <h4>Okay</h4>
+        </div>
+        <div class="okay">
+           <p>Okay</p>
+       </div>
+       <button onclick="qS()">Here</button>
+       <br>
+       <br>
+
+       <!--iv-->
+       
+       <h3 class="cats">Tortoise</h3>
+       <h3 class="cats">Calico</h3>
+       <h3 class="cats">Tiger</h3>
+
+       <button onclick="diffCats()">Cats</button>
+        
+    <!--v-->
+
+
+    <!--vi-->
+    <p id="poetry">Wherefore do minstrels sing...</p>
+    <button id="encore" onclick="theBard()">Encore</button>
+    
+    <!--b-->
+    <br>
+    <p>fill in</p>
+     <input id="fillIn" onchange="change()" type="text">
+
+     <br>
+     <p>fill in</p>
+     <input id="add" oninput="changeTwo()" type="text">
+        
+
+    <script>
+    /*4.1*/
+    /*a*/
+     function greetingOne() {
+         return ("Hi there people");
+     }
+     console.log(greetingOne());
+    /*b*/   
+            
+    function greeting() {
+  document.getElementById("hello").innerHTML = "Hello human";
+}
+
+    function greetingTwo() { 
+            document.getElementById("bye").innerHTML = "Bye";
+    }
+
+ /*b*/   
+
+    function mineFunction(x, text) {
+    x = document.getElementById("beans").value;
+	if (isNaN(x)) {
+    text = "what?!?";
+  	} else {
+    text = "yummy";
+  	}
+  document.getElementById("reaction").innerHTML = text;
+}
+ 
+inputChange = () => {
+    a = document.getElementById("choose").value;
+            document.getElementById("words").innerHTML = "your favorite flavor is " + a;
+}
+
+/*let f = document.getElementById("somethingOrOther");
+console.log(f);*/
+
+/*c */
+
+whichNumber = (parameter) => {
+    console.log(parameter);
+    let answer = getElementById('somethingOrOther');
+    console.log(answer);
+}
+
+/*d*/
+someTypeOfNumber = () => {
+    h = document.getElementById("someNumber").value;
+    let result = h * 2;
+    console.log(result);
+}
+
+
+
+/*4.2*/     
+/*i*/
+   threeBears = ()  => {
+       let b = document.getElementsByClassName("para");
+       b[0].innerHTML = "I meant three bears!";
+   }
+     
+ /*ii*/ 
+    vegFruit = () => {
+     let list = document.getElementsByTagName("UL")[0];
+     list.getElementsByTagName("LI")[1].innerHTML = "Aubergine";
+     }
+
+/*iii*/
+   
+qS = () => {
+    let okay = document.querySelector(".okay").style.color = "purple";
+}
+
+/*iv*/
+  
+diffCats = () => {
+    let feline = document.querySelectorAll("h3")[2].style.color = "green";
+    }
+    
+/*v*/  
+
+
+/*vi*/
+theBard = () => {
+    let x = document.getElementById("poetry").innerText;
+    document.getElementById('encore').innerHTML = x;
+}
+  
+/*b*/
+change = () => {
+    let v = document.getElementById("fillIn").value;
+    console.log(v);
+}
+ changeTwo = () => {
+     let w = document.getElementById("add").value;
+     console.log(w);
+ }
+ 
+   
+
+
+
+
+
+    </script>
+</body>
+</html>
