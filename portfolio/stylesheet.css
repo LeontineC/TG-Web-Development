@@ -5,7 +5,8 @@ body {
         font-family: 'Indie Flower', sans-serif;
         color: beige;
         margin: 0;
-        padding: 0;}
+        padding: 0;
+        overflow-x: hidden;}
 
 nav {
         display: flex;
@@ -50,7 +51,14 @@ button:hover {
     color: black;
 }
 
-
+.animation::before {
+            content: 'webdeveloper';
+            position: absolute;
+            color: beige;
+            display: inline-block;
+            font-size: 6em;
+            padding-left: 4.5em;
+}
 
 .animation {
             position: relative;
@@ -82,17 +90,34 @@ button:hover {
             to   {background-position: -40%, 60%, 70%, -150%, 10%;}
 }
   
-.text {
-        font-size: 6em;
-        position: relative;
-        bottom: 6em;
-        left: 5.4em;
-        }
 
- @media (max-width: 650px) {
-     nav {flex-direction: column;}
-     .logo {margin-top: 1em;}
-     .animation {width: 80%;
+
+ @media (max-width: 768px) {
+     nav {
+         flex-direction: column;
+         }
+     .logo {
+         margin-top: 1em;
+         margin-left: 3em;;
+        }
+    .anchors ul {
+        margin-left: 2em;
+    }
+
+    .animation::before {
+        font-size: 2.5em;
+        padding-left: 4em;
+        
+    }
+     .animation {
+                width: 80%;
+                height: 75vh;
                 background-repeat: repeat;
-                animation-duration: 80s;}
+                animation-duration: 60s;
+                margin-left: -1em;;
+               }
+        
+        button {
+           font-size: 1em;
+        }
  }

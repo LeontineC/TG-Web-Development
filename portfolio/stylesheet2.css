@@ -3,6 +3,7 @@ body { height: 100vh;
         background-color: black;
         font-family: 'Indie Flower', sans-serif;
         color: beige;
+        overflow-x: hidden;
         }
 
         nav {
