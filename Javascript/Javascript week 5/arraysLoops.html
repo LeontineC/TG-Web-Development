@@ -47,7 +47,7 @@
         console.log(fruit);
 
         /*5.2*/
-        
+
         const dutchSports = ['Voetbal', 'Hockey', 'Schaatsen'];
 
 
@@ -127,49 +127,106 @@
      /*a*/      dutchSportsTwo.push('Zeilen', 'Zwemmen');
 
       /*b*/     dutchSportsTwo.unshift('Volleyball');
-                
-        
-    /*c*/       const ballSports = dutchSportsTwo.slice(0,2);
-                console.log(ballSports);
+
+
+    /*c*/       const ballSports = dutchSportsTwo.slice(0, 2);
+        console.log(ballSports);
 
     /*d*/       dutchSportsTwo.shift();
-                dutchSportsTwo.shift();
-                
+        dutchSportsTwo.shift();
+
 
     /*e*/       dutchSportsTwo.sort();
-                console.log(dutchSportsTwo);
+        console.log(dutchSportsTwo);
 
     /*f*/       dutchSportsTwo.forEach(element => console.log(element));
 
     /*g*/       const sportsLength = dutchSportsTwo.length;
-                console.log(sportsLength);
+        console.log(sportsLength);
 
     /*5.4*/     let arrayLike = document.querySelectorAll('div');
-                console.log(arrayLike);
+        console.log(arrayLike);
 
-        /*a*/     const newArray = Array.from('arrayLike');
-                    console.log(newArray);
+        /*a from*/      const newArray = Array.from('arrayLike');
+        console.log(newArray);
 
-        /*b*/    
+        /*b filter*/    const countries = ['Tunisia', 'Laos', 'Azerbajian', 'Japan'];
+        let countriesFewLetters = countries.filter(e => e.length <= 5);
+        console.log(countriesFewLetters);
 
-        /*c*/   
+        const countryInfo = [
+            { name: 'Vietnam', population: 96460000 },
+            { name: 'Andorra', population: 77142 },
+            { name: 'Cape Verde', population: 549935 },
+            { name: 'Sri Lanka', population: 21800000 }
+        ];
+        let smallCountries = countryInfo.filter(e => e.population < 80000);
+        console.log(smallCountries);
 
-        /*d*/
+        /*c find*/      let five = [8, 67, 89, 34, 98];
+        let underFive = five.find(e => e <= 9);
+        console.log(underFive);
 
-        /*e*/
+        /*d some*/      let six = [2, 87, 56, 55, 20, 43];
+        let sixFive = e => e % 5 === 0;
+        let answer = six.some(sixFive);
+        console.log(answer);
 
-        /*f*/
+        /*e every*/     let seven = [80, 60, 45, 1, 65, 45, 876];
+        let sevenTen = e => e > 10;
+        let nextAnswer = seven.every(sevenTen);
+        console.log(nextAnswer);
 
-    /*6.1*/
+        /*f includes*/  let eight = [9, 78, 56, 8, 54, 23, 74, 2];
+        let eightEight = eight.includes(8);
+        console.log(eightEight);
 
-    /*a*/
+        /*6.1*/
 
+        /*a Object,Literal,Function,Singleton,Class-based*/
 
+        let petObject = new Object();
+        petObject.name = "Zaitoun"
+        petObject.type = "cat"
 
+        console.log(petObject);
 
+        
 
+        let petLiteral = {
+            name: "Jimmy",
+            type: "guppy"
+        }
+        
+        console.log(petLiteral);
 
+        let petFunction = (name, type) => {
+            this.name = Karl
+            this.type = canary
+        }
 
+        console.log(petFunction);
+
+        let petSingleton = new function() {
+            this.name = "Blue",
+            this.type = "boa constrictor"
+            }
+
+        console.log(petSingleton);
+
+        class petTwo {
+            constructor(name, type) {
+                this.name = "James"
+                this.type = "dog"
+            }
+        }
+        let classConstructed = new petTwo("James", "dog")
+
+        console.log(petTwo);
+
+    /*b object.create   prototype Object.assign*/
+
+    
     </script>
 </body>
 
