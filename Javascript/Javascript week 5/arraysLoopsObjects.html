@@ -155,10 +155,10 @@
         console.log(countriesFewLetters);
 
         const countryInfo = [
-            { name: 'Vietnam', population: 96460000 },
-            { name: 'Andorra', population: 77142 },
-            { name: 'Cape Verde', population: 549935 },
-            { name: 'Sri Lanka', population: 21800000 }
+            { name: 'Vietnam', population: 96460000},
+            { name: 'Andorra', population: 77142},
+            { name: 'Cape Verde', population: 549935},
+            { name: 'Sri Lanka', population: 21800000}
         ];
         let smallCountries = countryInfo.filter(e => e.population < 80000);
         console.log(smallCountries);
@@ -183,7 +183,7 @@
 
         /*6.1*/
 
-        /*a Object,Literal,Function,Singleton,Class-based*/
+        /*a Object,Literal,Function,Singleton,Class-based & b*/
 
         let petObject = new Object();
         petObject.name = "Zaitoun"
@@ -191,14 +191,27 @@
 
         console.log(petObject);
 
-        
+        let newpetObject = Object.create(petObject);
+
+        newpetObject.name = 'Daisy';
+        newpetObject.type = 'donkey';
+
+        console.log(newpetObject);
 
         let petLiteral = {
             name: "Jimmy",
             type: "guppy"
         }
-        
+
         console.log(petLiteral);
+
+        let newpetLiteral = Object.create(petLiteral);
+        newpetLiteral.name = 'Goldie';
+        newpetLiteral.type = 'goldfish';
+
+        console.log(newpetLiteral);
+
+
 
         let petFunction = (name, type) => {
             this.name = Karl
@@ -207,12 +220,30 @@
 
         console.log(petFunction);
 
-        let petSingleton = new function() {
+        let newPetFunction = Object.create(petFunction);
+        newPetFunction.name = 'Antonio';
+        newPetFunction.type = 'budgie';
+
+        console.log(newPetFunction);
+
+
+        let petSingleton = new function () {
             this.name = "Blue",
-            this.type = "boa constrictor"
-            }
+                this.type = "boa constrictor"
+        }
 
         console.log(petSingleton);
+
+        let newPetSingleton = Object.create(petSingleton, {
+            favoriteSeason: {
+                value: 'summer'
+            }
+        });
+
+        newPetSingleton.name = 'Gladys';
+        newPetSingleton.type = "garter snake";
+
+        console.log(newPetSingleton);
 
         class petTwo {
             constructor(name, type) {
@@ -224,9 +255,38 @@
 
         console.log(petTwo);
 
-    /*b object.create   prototype Object.assign*/
+        let newClassConstructed = Object.create(classConstructed, {
+            color: {
+                value: 'black'
+            }
+        });
+        newClassConstructed.name = "Candice"
+        newClassConstructed.type = "rat"
 
-    
+        console.log(newClassConstructed);
+
+        /*c*/
+        let personsArr = [
+            { name: 'Phineas', age: 13 },
+            { name: 'Eileen', age: 64 },
+            { name: 'Timmy', age: 32 },
+            { name: 'Rosemary', age: 93},
+            { name: 'Owen', age: 53},
+            { name: 'Willow', age: 23},
+            { name: 'Bernie', age: 43},
+            { name: 'Stanley', age: 8},
+            { name: 'Peggy', age: 62},
+            { name: 'Harriet', age: 3}
+        ];
+            console.log(personsArr);
+
+          let newPersonsArr = personsArr.sort((x, y) => x.age - y.age);
+          console.log(newPersonsArr);
+        
+    /*6.1*/
+        
+
+
     </script>
 </body>
 
