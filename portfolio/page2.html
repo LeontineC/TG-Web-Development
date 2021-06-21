@@ -17,19 +17,19 @@
     <div class="page">
         <nav class="nav">
             <div class="logo">
-                <p>Leontine Claassen</p>
+                <p>LeontineC</p>
             </div>
             <div class="anchors">
                 <ul>
                     <li><a href="page2.html#what"><button>what i do</button></a></li>
                     <li><a href="page2.html#contact"><button>let's talk</button></a></li>
-                    <li><a href="portfolio.html#back"><button>back home</button></a></li>
+                    <li><a href="index.html"><button>back home</button></a></li>
                 </ul>
             </div>
     </div>
     </nav>
     <div class="container" id="who">
-        <img class="photo" src="./silhouette-376538_640.jpg" alt="my photo">
+        <img class="photo" src="bird-logo.jpg" alt="my photo">
         <div class="who">
             <h2>who i am</h2>
             <p>My name is Leontine and this portfolio is a work in progress.
@@ -57,16 +57,24 @@
     <h2></h2>
     <div class="container" id="contact">
         <div class="contact">
-            <div class="talk"><i class="material-icons" style="font-size: 1em">mail_outline</i><span>
+            <div class="typing" id="typing">Feel free to contact me ... let's talk!</div>
+            <div class="talk"><a href="mailto:leon.claassen00@gmail.com" i class="material-icons" style="font-size: 1em">mail_outline</i></a><span>
                     leon.claassen00@gmail.com</span></div>
-            <div class="talk">Linked<a href=“#” class="fa fa-linkedin" style="font-size: 1em; color:beige">
-                </a>
+            <div class="talk"><a href=“www.linkedin.com/in/leontine-claassen-833747213” class="fa fa-linkedin" style="font-size: 1em; color:beige">
+                </a> <span> <a href="https://github.com/LeontineC" i class="fa fa-github"></i></a></span>
             </div>
         </div>
     </div>
-    <h2></h2>
-    </div>
-    <footer></footer>
+   
+    
+    <footer>&copy; 2021 LMHH Claassen</footer>
+
+
+    <script>
+      let x = document.getElementById("typing").innerHTML;
+      console.log(x.length);
+       
+    </script>
 </body>
 
 </html>

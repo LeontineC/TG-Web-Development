@@ -10,15 +10,22 @@ body {
 
 nav {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-evenly;
         align-items: center;
     }
 
-.logo {
+.logo p {
             border: solid beige 2px;
             border-radius: 50%;
-            padding: 0 1em;
+            padding-top: .2em;
             margin: 0;
+            box-sizing: border-box;
+            width: 5em;
+            height: 2em;
+            font-size: 2em;
+            text-align: center;
+            
             
             }
 
@@ -44,6 +51,7 @@ button {
         font-size: 2em;
         cursor: grab;
         transition-duration: .5s;
+        box-sizing: border-box;
         }
 
 button:hover {
@@ -56,8 +64,8 @@ button:hover {
             position: absolute;
             color: beige;
             display: inline-block;
-            font-size: 6em;
-            padding-left: 4.5em;
+            font-size: 7vw;
+            left: 30%;
 }
 
 .animation {
@@ -67,18 +75,21 @@ button:hover {
             height:80vh;
             left:4em;
             top: 1em;
-            background-repeat: repeat;
+            
+            background-repeat: repeat-x, repeat-x, repeat-x, repeat-x, no-repeat;
 
             background-image: 
                 
-                url('22607-9-black-tree-image.png'),
-                url('580b585b2edbce24c47b2636.png'),
                 url('kisspng-image-file-formats-display-resolution-forest-png-image-5a764e36f08088.1312068015177027109851.png'),
+                url('580b585b2edbce24c47b2636.png'),
+                url('22607-9-black-tree-image.png'),
                 url('kisspng-tooth-and-tail-monaco-what-s-yours-is-mine-cloud-dust-5abba774d07a76.3669531215222475408539.png'),
-                url('https://cdn.pixabay.com/photo/2017/08/07/15/25/cloudy-2604912_1280.jpg');
+                url('https://cdn.pixabay.com/photo/2017/08/07/15/25/cloudy-2604912_1280.jpg'); 
 
-            background-size: cover;
-            background-position: 240%, -100%, -50%, 70%, -100%;
+            /*background-size: 1800px, 1000px, 1000px, 900px, cover;*/
+            background-size: 200%, 110%, 120%, 150%, cover ;
+            background-position: 70%, -100%, 10% , 100%, 100%;
+            
             animation-name: animation;
             animation-duration: 30s;
             animation-iteration-count: infinite;
@@ -86,16 +97,15 @@ button:hover {
             
             
 @keyframes animation {
-            from {background-position: 240%, -100%, -50%, 70%, -100%;} 
-            to   {background-position: -40%, 60%, 70%, -150%, 10%;}
-}
-  
+            from {background-position: 70%, -100%, 10%, 100%, 100%;}
+            to {background-position: 100%, 300%, -100%, -200%, 100%;}
+            };
 
 
  @media (max-width: 768px) {
-     nav {
+     /*nav {
          flex-direction: column;
-         }
+         }*/
      .logo {
          margin-top: 1em;
          margin-left: 3em;;
