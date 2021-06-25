@@ -31,7 +31,7 @@ body {
             position: absolute;
             margin: 0 auto;
             border-radius: 3%;
-            transition: left .6s ease-in; /*does something but needs work*/
+            transition: left 2s ease-in ; /*does something but needs work*/
             
             }
 
@@ -42,6 +42,7 @@ body {
 .image__visible    {  
                 display: block;
                 position: absolute;
+                /*visibility: hidden;*/
                 
                 }
 
