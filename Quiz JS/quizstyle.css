@@ -1,0 +1,94 @@
+
+
+
+.startButton {
+                background-color: #0a7a77 ;
+                margin: 0  auto;
+                font-family: 'Indie Flower', sans-serif;
+                font-size: 4em;
+                padding: .05em .25em;
+                cursor: pointer;
+                display: block; 
+}
+
+.geoProblem   {
+            margin: 0 auto;
+            width: 20vw;
+            border: solid black 1px;
+            text-align: center;
+            font-size: 3em;
+            font-family: 'Indie Flower', sans-serif; 
+            background-color: #0a7a77;
+            display: none;
+           
+                    
+}
+
+.geoProblem > h4    {
+                margin: .2em  0 .5em  auto;
+                
+            }
+
+
+.page {             
+                margin: 0 0 1em auto;
+            }
+
+.question  {         
+                    margin: 0 auto;
+            }
+
+.answers { 
+                margin: 0 auto;
+}          
+
+
+.answers > button {
+
+                    font-family: 'Indie Flower', sans-serif; 
+                    background-color: white;
+                    font-size: .7em;
+                    width: 100%;
+                    cursor: pointer;
+                   }
+
+
+
+
+
+.prevNextbtn  {
+                font-family: 'Indie Flower', sans-serif;
+                background-color: #57e2de ;
+                margin: .5em;
+                font-size: .5em;
+                cursor: pointer;
+            }
+
+
+
+
+.end      {
+            display: none;
+            margin: 0 auto;
+            text-align: center;
+            width: 20vw;
+            font-family: 'Indie Flower', sans-serif;
+            font-size: 3em;
+}
+
+.end > h4  {  
+            margin: 0 auto;
+
+}
+
+.end > p    {   
+                font-size: .5em;
+}
+
+.end > button {  
+                margin: 0 auto;
+                font-family: 'Indie Flower', sans-serif;
+                cursor: pointer;
+                background-color:  #0a7a77;
+                font-size: 1em;
+}
