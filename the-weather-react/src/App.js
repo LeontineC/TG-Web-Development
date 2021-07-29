@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import WeatherOverview from './components/WeatherOverview'
 import WeatherCard from './components/WeatherCard'
-
+import WeatherIcons from './Assets/WeatherIcons'
+import CurrentTime from './components/CurrentTime'
 
 
 
@@ -10,7 +11,7 @@ const App = () => {
   const [city, setCity] = useState()
 
   useEffect(() => {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=Montreal,ca&APPID=${process.env.REACT_APP_OPENWEATHER_API_KEY}&units=metric`)
+    fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=45.5088&lon=-73.5878&exclude=hourly&units=metric&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}`)
       .then((response) => response.json())
       .then((newData) => setData(newData))
 
@@ -27,7 +28,8 @@ const App = () => {
       <div className='container'>
 
         <WeatherCard data={data} />
-        <div>{Math.round(data.main.temp)} &deg; C</div>
+        <WeatherIcons data={data} />
+        <CurrentTime />
         
 
 
