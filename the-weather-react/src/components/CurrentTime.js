@@ -3,8 +3,8 @@ import React from 'react'
 
 
 const CurrentTime = () => {
-    const currentTime = new Date();
-    const timeOther = new Date().toLocaleString('en-CA',{
+    
+    const currentTime = new Date().toLocaleString('en-CA',{
         timeZone: 'America/Toronto',
         hour: '2-digit',
         minute: '2-digit'
@@ -14,7 +14,7 @@ const CurrentTime = () => {
         
     return (
         <div>
-            {timeOther}
+            {currentTime}
         </div>
     )
 }

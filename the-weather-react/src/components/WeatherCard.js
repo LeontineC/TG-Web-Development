@@ -1,5 +1,7 @@
 import React from 'react'
 import CurrentDate from './CurrentDate'
+import CurrentTime from './CurrentTime'
+
 
 
 
@@ -11,9 +13,11 @@ const WeatherCard = ({ data }) => {
 
             <CurrentDate />
             <h2>Montreal</h2>
-            <p>humidity: {data.current.humidity}</p>
+            <CurrentTime />
             <p>{Math.round(data.current.temp)} &deg; C</p>
-           
+            
+            
+          
 
         </div>
     )

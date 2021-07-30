@@ -26,12 +26,12 @@ const WeatherIcons = ({ data }) => {
     "50n": "FOG",
 
 };
-
+console.log(data.minutely[1].precipitation)
 console.log(data.current.weather[0].icon)
-
+let iconID = (data.current.weather[0].icon)
   return (
     <ReactAnimatedWeather
-      icon={iconCode['09d']}
+      icon={iconCode[iconID]}
       color="black"
       size="50"
       animate={true}
