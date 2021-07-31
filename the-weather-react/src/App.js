@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import WeatherDetail from './components/WeatherDetail'
 import WeatherCard from './components/WeatherCard'
-import WeatherIcons from './Assets/WeatherIcons'
-import {Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 const App = () => {
@@ -18,29 +17,25 @@ const App = () => {
 
   if (!data) return null
 
-  
+
 
 
   return (
-    
+
     <>
 
       <div className='container'>
 
         <WeatherCard data={data} />
-        <WeatherIcons data={data} />
-        <p>max.temp: {data.daily[2].temp.max} &deg; C</p>
-        <p>min.temp: {data.daily[2].temp.min} &deg; C</p>
-        <p>humidity: {data.current.humidity}</p>
+
         <Link to='/WeatherDetail'>
           <button className='button'>7-day forecast</button>
         </Link>
-        
-        
+
       </div>
-    
-    
-        
+
+
+
     </>
   )
 }

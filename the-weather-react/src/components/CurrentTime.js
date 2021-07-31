@@ -1,17 +1,19 @@
 import React from 'react'
 
+//timezone  timezone_offset
 
 
-const CurrentTime = () => {
-    
+const CurrentTime = ({data}) => {
+
+    const timezone = (data.timezone)
+
     const currentTime = new Date().toLocaleString('en-CA',{
-        timeZone: 'America/Toronto',
+        timeZone: [timezone],
         hour: '2-digit',
         minute: '2-digit'
         }
     )
     
-        
     return (
         <div>
             {currentTime}

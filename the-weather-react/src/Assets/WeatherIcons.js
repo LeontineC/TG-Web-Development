@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactAnimatedWeather from 'react-animated-weather';
-
+import WeatherCard from '../components/WeatherCard';
 
 
 
@@ -26,8 +26,7 @@ const WeatherIcons = ({ data }) => {
     "50n": "FOG",
 
 };
-console.log(data.minutely[1].precipitation)
-console.log(data.current.weather[0].icon)
+
 let iconID = (data.current.weather[0].icon)
   return (
     <ReactAnimatedWeather
