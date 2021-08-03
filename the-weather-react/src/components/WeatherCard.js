@@ -9,7 +9,7 @@ const WeatherCard = ({ data }) => {
 
 
     return (
-        <div>
+        <div className='containerCard'>
 
             <CurrentDate />
             <h2>Montreal</h2>

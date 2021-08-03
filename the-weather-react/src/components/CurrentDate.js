@@ -1,10 +1,10 @@
 import React from 'react'
 
-export default function CurrentDate(props) {
+export default function CurrentDate() {
     let time = new Date();
     
   
-    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Sat"];
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     let months = [
       "January",
       "February",
