@@ -1,24 +1,30 @@
 import React from 'react'
-import CurrentDate from './CurrentDate'
+
 import CurrentTime from './CurrentTime'
 import WeatherIcons from '../Assets/WeatherIcons'
 
 
-const WeatherCard = ({ data }) => {
 
+const WeatherCard = ({ data, city}) => {
 
-
+    const iconType = (data.current.weather[0].icon)
+    const timezone = (data.timezone)
+    const todaysdate = new Date(data.current.dt * 1000)
+    const todaysDate = new Intl.DateTimeFormat('en-UK', {weekday: 'long', day: '2-digit' , month: 'long', year: 'numeric'  }).format(todaysdate)
+    
     return (
         <div className='containerCard'>
 
-            <CurrentDate />
-            <h2>Montreal</h2>
-            <CurrentTime data={data} />
+            
+            <p>{todaysDate}</p>
+            <h2>{city}</h2>
+            <CurrentTime thetimezone = {timezone} />
             <p>{Math.round(data.current.temp)} &deg; C</p>
             <p>{data.current.weather[0].description}</p>
-            <WeatherIcons data={data} />
+            <WeatherIcons iconID={iconType} />
             <p>humidity: {data.current.humidity} %</p>
-
+            
+           
 
         </div>
     )

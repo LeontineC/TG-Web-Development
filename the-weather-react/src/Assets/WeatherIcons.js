@@ -4,7 +4,7 @@ import WeatherCard from '../components/WeatherCard';
 
 
 
-const WeatherIcons = ({ data }) => {
+const WeatherIcons = ({ iconID }) => {
   const iconCode = {
     "01d": "CLEAR_DAY",
     "01n": "CLEAR_DAY",
@@ -27,7 +27,7 @@ const WeatherIcons = ({ data }) => {
 
 };
 
-let iconID = (data.current.weather[0].icon)
+
   return (
     <ReactAnimatedWeather
       icon={iconCode[iconID]}
