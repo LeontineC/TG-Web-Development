@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactAnimatedWeather from 'react-animated-weather';
-import WeatherCard from '../components/WeatherCard';
 
 
 
-const WeatherIcons = ({ iconID }) => {
+
+const WeatherIcons = ({ iconID, size}) => {
   const iconCode = {
     "01d": "CLEAR_DAY",
     "01n": "CLEAR_DAY",
@@ -32,7 +32,7 @@ const WeatherIcons = ({ iconID }) => {
     <ReactAnimatedWeather
       icon={iconCode[iconID]}
       color="black"
-      size="50"
+      size={size}
       animate={true}
     />
   );

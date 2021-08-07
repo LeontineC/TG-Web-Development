@@ -8,6 +8,7 @@ const App = () => {
   const [longtitude, setLongtitude] = useState(-73.5878)
   const [city, setCity] = useState('Montreal')
 
+  /* fetch 2 api's get cities and read their longtitude to use in weather detail? */
 
   useEffect(() => {
     fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longtitude}&exclude=hourly,minutely&units=metric&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}`)
@@ -20,7 +21,7 @@ const App = () => {
 
   if (!data) return null
 
-  // can this be cleaned up? 
+ 
 
   const handleOnClick = (e) => {
     const newLatitude = 52.374
@@ -29,10 +30,11 @@ const App = () => {
     changeCity()
 
   }
+
   const changeLongtitude = (e) => {
     const newLongtitude = 4.8897
     setLongtitude(newLongtitude)
-    
+
   }
   const changeCity = (e) => {
     const newCity = `Amsterdam`
@@ -48,26 +50,29 @@ const App = () => {
   const changeLongtitudeBack = (e) => {
     const newLongtitudeBack = -73.5878
     setLongtitude(newLongtitudeBack)
-    
+
   }
   const changeCityBack = (e) => {
     const newCityBack = `Montreal`
     setCity(newCityBack)
   }
-   
+
   return (
 
     <>
-      
-      <div><WeatherOverview data={data} city={city}/></div>
-      <button className='citybutton'
-        onClick={() => {
-             handleOnClick()
-        }}> the weather Amsterdam</button>
-        <button className='citybuttonBack'
-        onClick={() => {
-             handleOnClickBack()
-        }}> the weather Montreal</button>
+
+      <div><WeatherOverview data={data} city={city} /></div>
+      <div className='buttonContainer'>
+        <button className='citybutton'
+          onClick={() => {
+            handleOnClick()
+          }}> the weather Amsterdam</button>
+        <button className='citybutton'
+          onClick={() => {
+            handleOnClickBack()
+          }}> the weather Montreal</button>
+      </div>
+
     </>
 
   )

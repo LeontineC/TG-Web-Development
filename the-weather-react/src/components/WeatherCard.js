@@ -13,20 +13,21 @@ const WeatherCard = ({ data, city}) => {
     const todaysDate = new Intl.DateTimeFormat('en-UK', {weekday: 'long', day: '2-digit' , month: 'long', year: 'numeric'  }).format(todaysdate)
     
     return (
+        
         <div className='containerCard'>
 
             
             <p>{todaysDate}</p>
             <h2>{city}</h2>
             <CurrentTime thetimezone = {timezone} />
+            <div className='weatherOnly'>
             <p>{Math.round(data.current.temp)} &deg; C</p>
             <p>{data.current.weather[0].description}</p>
             <WeatherIcons iconID={iconType} />
             <p>humidity: {data.current.humidity} %</p>
-            
-           
-
+            </div>
         </div>
+        
     )
 }
 
