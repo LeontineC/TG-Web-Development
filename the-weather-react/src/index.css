@@ -5,7 +5,7 @@
 body {
   background-image: url('https://cdn.pixabay.com/photo/2017/02/21/09/02/clouds-2085112_960_720.jpg');
   background-size: cover;
-  overflow: auto;
+  overflow:visible;
   box-sizing: border-box;
 }
 

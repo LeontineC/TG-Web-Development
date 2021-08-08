@@ -9,8 +9,7 @@ const WeatherCard = ({ data, city}) => {
 
     const iconType = (data.current.weather[0].icon)
     const timezone = (data.timezone)
-    const todaysdate = new Date(data.current.dt * 1000)
-    const todaysDate = new Intl.DateTimeFormat('en-UK', {weekday: 'long', day: '2-digit' , month: 'long', year: 'numeric'  }).format(todaysdate)
+    const todaysDate = new Intl.DateTimeFormat('en-UK', {weekday: 'long', day: '2-digit' , month: 'long', year: 'numeric'  }).format(new Date(data.current.dt * 1000))
     
     return (
         
