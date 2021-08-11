@@ -1,0 +1,9 @@
+.navbar { 
+        display: flex;
+}
+
+.navLinks {
+        color: black;
+        text-decoration: none;
+}
+
