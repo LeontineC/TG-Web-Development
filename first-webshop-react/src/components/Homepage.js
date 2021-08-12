@@ -1,11 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
+import { AuthContext } from './Auth'
 
 const Homepage = () => {
+    const { currentUser } = useContext(AuthContext)
     return (
-        <div>
+        <>
             <p>Homepage</p>
-        </div>
+            {currentUser ? (
+                <p>you are logged in - <Link to='/dashboard'>dashboard</Link></p>
+            ) : (
+                <p>
+                    <Link to='/login'>log in</Link> or <Link to='/signup'>sign up</Link>
+                </p>
+            )}
+        </>
     )
 }
 
-export default Homepage
+export default Homepage;
