@@ -1,27 +1,35 @@
-body {
-    background-image: url('https://cdn.pixabay.com/photo/2017/02/21/09/02/clouds-2085112_960_720.jpg');
-    overflow: hidden;
+.containerForecast {
+  position: absolute;
+  top: 1%;
+  left: 70%;
+  min-width: 19vw;
+  margin: 5.5% auto;
+  overflow: auto;
+  max-height: 69%;
+  border: rgb(38, 57, 77);
+  padding: 30px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  background-color: transparent;
+  overflow: hidden;
 }
 
-.containerForecast {
-    position: relative;
-    max-width: 300px;
-    top: -725px;
-    left: 1000px; 
-    overflow: hidden;
-    min-height: 500px;
-    border: rgb(38, 57, 77);
-    padding: 30px;
-    border-radius: 5px;
-    text-align: center;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-    background-color: transparent;
-    
-}
+@media screen and (max-width: 1200px) and (min-width: 820px) {
+  .containerForecast { 
+    left: 65%;
+  }
+} 
+
+@media screen and (max-width: 770px) {
+    .containerForecast {
+        top: 80%;
+        left: 35%;
+    }
+} 
 
 .accordion {
     width: 100%;
-    height: 500px;
     background-color: transparent;
     margin: 0 auto;
     border-radius: 5px;
@@ -32,7 +40,7 @@ body {
 
 .accordion::-webkit-scrollbar {
     width: 15px;
-  }
+}
   
   
   .accordion::-webkit-scrollbar-track {
@@ -54,10 +62,16 @@ body {
         display: flex;
         justify-content: space-between;
         margin: 0 15px;
-        margin-top: 2.5em; 
+        margin-top: 2.3em; 
         cursor: pointer;
         font-size: 12px;
         height: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+    .titleIcons {
+       margin-top: 1.6em;
+    }
 }
 
 .content {
