@@ -1,5 +1,5 @@
 import React,  { useContext } from 'react'
-import { Redirect } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
 import { AuthContext } from './Auth'
 import firebaseApp from './Firebase'
 
@@ -27,6 +27,7 @@ const Login = () => {
             <input type='password' name='password' placeholder='password'/>
             <button type='submit'> log in</button>
         </form>
+        <Link to='/passwordreset'>forgot password?</Link>
         </>
     );
 }

@@ -3,19 +3,21 @@ import ProductOverview from './ProductOverview'
 
 import { connect } from 'react-redux'
 
-const ProductOverviewData = ({products}) => {
+const ProductOverviewData = ({ products }) => {
 
+    
    
     return (
         <div>
             
-            {products.map((prods) => 
-            <ProductOverview  prods={prods}/>)}
+           {products.map((items) => 
+            <ProductOverview key={items.id} items={items}/>)}  
         </div>
     )
+    
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state) => { 
      return {
          products: state.shop.products,
      }

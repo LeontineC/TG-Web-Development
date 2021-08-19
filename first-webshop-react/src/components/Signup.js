@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { Redirect } from 'react-router-dom'
 import firebaseApp from './Firebase'
+import { Link } from 'react-router-dom'
 
 const Signup = () => {
     const [currentUser, setCurrentUser] = useState(null);
@@ -31,7 +32,7 @@ const Signup = () => {
                 <input type='password' name='password' placeholder='password' />
                 <button type='submit'>join us</button>
             </form>
-            <h2>already a member? login</h2>
+            <h2>already a member? <Link to='/login'>login</Link></h2>
             </div>
         </>
     )
