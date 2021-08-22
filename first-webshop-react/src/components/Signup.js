@@ -1,41 +1,52 @@
-import React, {useState} from 'react'
-import { Redirect } from 'react-router-dom'
-import firebaseApp from './Firebase'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { useAuthState } from 'react-firebase-hooks/auth'
+import { Link, useHistory } from 'react-router-dom'
+import { auth, registerWithEmailAndPassword } from './Firebase'
+
 
 const Signup = () => {
-    const [currentUser, setCurrentUser] = useState(null);
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const {email, password } = e.target.elements;
-        try {
-            firebaseApp.auth().createUserWithEmailAndPassword(email.value, password.value)
-            setCurrentUser(true);
-        } catch (error) {
-            alert(error);
-        }
-    }
-    if (currentUser) {
-        return <Redirect to='/dashboard' />
-    }
 
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
+  const [user, loading, error] = useAuthState(auth)
+  const history = useHistory()
 
-    return (
-        <>
-        <div className='signupCard'>
-            <h2>become a member</h2>
-            <form onSubmit={handleSubmit}>
-                <label for='email'>email</label>
-                <input type='email' name="email" placeholder='email' />
-                <label for='password'>password</label>
-                <input type='password' name='password' placeholder='password' />
-                <button type='submit'>join us</button>
-            </form>
-            <h2>already a member? <Link to='/login'>login</Link></h2>
-            </div>
-        </>
-    )
+  const signup = () => {
+
+    registerWithEmailAndPassword(email, password);
+  };
+
+  useEffect(() => {
+    if (loading) return;
+    if (user) history.replace('/dashboard');
+  }, [user, loading]);
+
+  return (
+    <>
+      <div className='signup'>
+
+        <input
+          type='text'
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder='email'
+        />
+        <input
+          type='password' value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder='password'
+        />
+        <button className='signupButton' onClick={signup}>
+          Sign up
+        </button>
+        <div>
+          already a member? <Link to='/login'>Login</Link> 
+        </div>
+
+      </div>
+    </>
+  )
 }
 
 export default Signup

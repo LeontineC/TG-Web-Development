@@ -1,6 +1,5 @@
-import React, { useContext, useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import { AuthContext } from './Auth'
+import React, { useState, useEffect } from 'react'
+
 import Basket from './Basket'
 
 import { connect } from 'react-redux'

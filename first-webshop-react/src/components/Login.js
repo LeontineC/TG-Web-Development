@@ -1,46 +1,52 @@
-import React,  { useContext, useRef } from 'react'
-import { Redirect, Link } from 'react-router-dom'
-import { AuthContext } from './Auth'
-import firebaseApp from './Firebase'
+import React, { useEffect, useState } from 'react'
+import { Link, useHistory } from 'react-router-dom'
+import { auth, signInWithEmailAndPassword } from './Firebase'
+import { useAuthState } from "react-firebase-hooks/auth"
 
 const Login = () => {
 
-    
-    
-    const emailRef = useRef()
-    const passwordRef = useRef()
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [user, loading, error] = useAuthState(auth);
+    const history = useHistory();
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const { email, password } = e.target.elements;
-        try{
-            
-           
-            firebaseApp.auth().signInWithEmailAndPassword(emailRef.current.value, passwordRef.current.value);
-        } catch(error ){
-            alert(error)
+
+    useEffect(() => {
+        if (loading) {
+            return;
         }
-            
-    };
-    const { currentUser } = useContext(AuthContext);
-    if (currentUser) {
-        return <Redirect to='/dashboard' />;
-    }
+        if (user) history.replace('/dashboard');
+    }, [user, loading]);
+
     return (
         <>
-        <h2>log in</h2>
-        
-        <form onSubmit={handleSubmit}>
-            <label for='email'>email</label>
-            <input type='email' name='email' placeholder='email' ref={emailRef} required/>
-            <label for='password'>password</label>
-            <input type='password' name='password' placeholder='password'ref={passwordRef} required/>
-            <button type='submit'> log in</button>
-        </form>
-        
-        <Link to='/passwordreset'>forgot password?</Link>
+            <div className='login'>
+                <input
+                    type='text'
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="email"
+                />
+                <input
+                    type='password'
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    placeholder='password'
+                />
+                <button
+                    className='loginButton'
+                    onClick={() => signInWithEmailAndPassword(email, password)}>login
+                </button>
+
+                <div>
+                    <Link to='passwordreset'>forgot password?</Link>
+                </div>
+                <div>
+                    not yet a member? <Link to='/signup'>sign up</Link> here.
+                </div>
+            </div>
         </>
-    );
+    )
 }
 
-export default Login;
+export default Login
