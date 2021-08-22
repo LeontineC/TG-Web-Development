@@ -8,6 +8,7 @@ import Cart from './Cart'
 import Dashboard from './Dashboard'
 import Signup from './Signup'
 import Login from './Login'
+import IconLogin from './IconLogin'
 import PasswordReset from './PasswordReset'
 import { AuthProvider } from './Auth'
 import ProductDetail from './ProductDetail'
@@ -32,11 +33,8 @@ function App({ detail }) {
               </Route>
               <Route exact path='/cart' component={Cart}>
               </Route>
-              {!detail ? (
-                <Redirect to='/productoverview' component={ProductOverviewData} />
-              ) : (
-                <Route exact path="/productdetail/:id" component={ProductDetail} />
-              )}
+              <Route exact path='/iconlogin' component={IconLogin}>
+              </Route>
               <Route exact path='/dashboard' component={Dashboard}>
               </Route>
               <Route exact path='/login' component={Login}>
@@ -45,6 +43,11 @@ function App({ detail }) {
               </Route>
               <Route exact path='/passwordreset' component={PasswordReset}>
               </Route>
+              {!detail ? (
+                <Redirect to='/' component={Homepage} />
+              ) : (
+                <Route exact path="/productdetail/:id" component={ProductDetail} />
+              )}
             </Switch>
           </div>
         </div>

@@ -26,7 +26,7 @@ const Navbar = ({ cart }) => {
             <Link to='/productoverview' className='navLinks'>Our Products</Link>
             <Link to='/cart' className='navLinks'>Basket<i className="ri-shopping-basket-line"></i></Link>
             <div className='cartCounter'>{cartCount}</div>
-
+            <Link to='/iconlogin'><i className="ri-login-circle-line">Login</i></Link>
 
         </nav>
     )

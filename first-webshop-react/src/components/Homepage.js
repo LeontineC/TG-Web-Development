@@ -1,13 +1,12 @@
 import React from 'react'
 
-
 const Homepage = () => {
-
     return (
-        <>
-            <p>Homepage</p>
-        </>
+        <div>
+            
+        </div>
     )
 }
 
-export default Homepage;
+export default Homepage
+

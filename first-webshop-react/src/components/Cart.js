@@ -6,7 +6,7 @@ import Basket from './Basket'
 import { connect } from 'react-redux'
 
 const Cart = ({ cart }) => {
-    const { currentUser } = useContext(AuthContext)
+    
 
     const [totalPrice, setTotalPrice] = useState(0)
     const [totalQuantity, setTotalQuantity] = useState(0)
@@ -29,15 +29,7 @@ const Cart = ({ cart }) => {
         <>
 
 
-            <div>
-                {currentUser ? (
-                    <p>you are logged in - <Link to='/dashboard'>dashboard</Link></p>
-                ) : (
-                    <p>
-                        <Link to='/login'>log in</Link> or <Link to='/signup'>sign up</Link>
-                    </p>
-                )}
-            </div>
+            
             <div>
                 {cart.map((item) =>
                     <Basket key={item.id} item={item} />

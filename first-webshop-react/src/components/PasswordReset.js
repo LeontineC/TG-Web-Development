@@ -1,30 +1,24 @@
-import React, { useState } from 'react'
-import firebaseApp from './Firebase'
+import React from 'react'
 
 const PasswordReset = () => {
-    const [email, setEmail] = useState('')
-    const [sentEmail, setSentEmail] = useState(false)
-    const [error, setError] = useState(null)
 
-    const onChangeHandler = (e) => {
-        const { name, value } = e.currentTarget
-        if (name === 'email') {
-            setEmail(value);
-        }
+    /*sendPasswordResetEmail = async (email, callback, onError) => {
+    try {
+      await this.auth.sendPasswordResetEmail(email);
+      callback && callback();
+    } catch (error) {
+      onError && onError(error);
+      console.log("sendPasswordResetEmail failed: ", error);
     }
-    const sendResetEmail = event => {
-        event.preventDefault();
-    }
+  }; */
 
 
-
-return (
-    <>
-        
-    
-    
-    </>
-)
+    return (
+        <div>
+            <p>forgot password</p>
+        </div>
+    )
 }
 
 export default PasswordReset
+
