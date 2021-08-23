@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { useHistory } from "react-router";
-import { Link } from "react-router-dom";
-import { auth, sendPasswordResetEmail } from "./Firebase";
+import React, { useEffect, useState } from 'react'
+import { useAuthState } from 'react-firebase-hooks/auth'
+import { useHistory } from 'react-router'
+import { Link } from 'react-router-dom'
+import { auth, sendPasswordResetEmail } from '../Firebase';
 
 const PasswordReset = () => {
 
@@ -25,13 +25,13 @@ const PasswordReset = () => {
           placeholder='email'
         />
         <button
-          className="resetButton"
+          className='resetButton'
           onClick={() => sendPasswordResetEmail(email)}
         >
           send me a password reset email
         </button>
         <div>
-          not yet a member? <Link to="/signup">sign up</Link> now.
+          not yet a member? <Link to='/signup'>sign up</Link> now.
         </div>
     </div>
       

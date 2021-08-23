@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
-import { auth, signInWithEmailAndPassword } from './Firebase'
-import { useAuthState } from "react-firebase-hooks/auth"
+import { auth, signInWithEmailAndPassword } from '../Firebase'
+import { useAuthState } from 'react-firebase-hooks/auth'
 
 const Login = () => {
 
@@ -25,7 +25,7 @@ const Login = () => {
                     type='text'
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="email"
+                    placeholder='email'
                 />
                 <input
                     type='password'

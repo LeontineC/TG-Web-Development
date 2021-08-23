@@ -4,12 +4,13 @@ import Navbar from './Navbar'
 import Homepage from './Homepage'
 import OurStory from './OurStory'
 import ProductOverviewData from './ProductOverview/ProductOverviewData'
-import Cart from './Cart'
-import Dashboard from './Dashboard'
-import Signup from './Signup'
-import Login from './Login'
-import PasswordReset from './PasswordReset'
-import ProductDetail from './ProductDetail'
+import Cart from './CartRelated/Cart'
+import Dashboard from './FirebaseRelated/Dashboard'
+import Signup from './FirebaseRelated/Signup'
+import Login from './FirebaseRelated/Login'
+import PasswordReset from './FirebaseRelated/PasswordReset'
+import ProductDetail from './CartRelated/ProductDetail'
+import Checkout from './Checkout'
 import { connect } from 'react-redux'
 
 
@@ -38,6 +39,8 @@ function App({ detail }) {
             <Route exact path='/signup' component={Signup}>
             </Route>
             <Route exact path='/passwordreset' component={PasswordReset}>
+            </Route>
+            <Route exact path='/checkout' component={Checkout}>
             </Route>
             {!detail ? (
               <Redirect to='/' component={Homepage} />

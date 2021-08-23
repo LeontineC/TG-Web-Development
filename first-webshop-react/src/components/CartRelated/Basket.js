@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import { connect } from 'react-redux'
-import { adjustItemQuantity, removeFromCart } from '../Redux/Webshop/shop-actions'
+import { adjustItemQuantity, removeFromCart } from '../../Redux/Webshop/shop-actions'
 
 const Basket = ({ item, removeFromCart, adjustQuantity }) => {
 

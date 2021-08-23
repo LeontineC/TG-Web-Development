@@ -1,11 +1,12 @@
 import React from 'react'
 
-const ResetPassword = () => {
+
+const Checkout = () => {
     return (
         <div>
-            
+            <p>checkout</p>
         </div>
     )
 }
 
-export default ResetPassword
+export default Checkout

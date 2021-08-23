@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-
+import { Link } from 'react-router-dom'
 import Basket from './Basket'
 
 import { connect } from 'react-redux'
@@ -40,7 +40,7 @@ const Cart = ({ cart }) => {
                     <span>{totalQuantity} egg warmers</span>
                     <span> &euro; {totalPrice}</span>
                 </div>
-                <button>to the checkout</button>
+                <Link to='./checkout'><button>to the checkout</button></Link>
             </div>
             
         </>

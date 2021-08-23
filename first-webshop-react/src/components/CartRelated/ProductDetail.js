@@ -2,7 +2,7 @@ import React from 'react'
 import './ProductDetail.css'
 
 import { connect } from 'react-redux'
-import { addToCart } from '../Redux/Webshop/shop-actions'
+import { addToCart } from '../../Redux/Webshop/shop-actions'
 
 const ProductDetail = ({ detail, addToCart }) => {
 
