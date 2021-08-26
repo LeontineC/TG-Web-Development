@@ -1,0 +1,48 @@
+ 
+    .footer{
+        margin-top: 1rem;
+        padding: 1rem;
+        background: var(--color-primary);
+        font-family: var(--font-primary);   
+        width: 100%;
+        }
+
+   hr {
+       width: 90%;
+   }
+    
+    .row {
+        display: flex;
+        margin-bottom: .5em;
+        text-align: center;
+    }
+
+    .list {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        text-align: center;
+        
+    }
+
+    li {
+        padding: .5em;
+    }
+    
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .icons:hover {
+        border: dashed 1px black;
+        border-radius: 50%;
+    }
+
+    .policy:hover {
+            font-style:italic;
+    }
+
+    
+    
+    

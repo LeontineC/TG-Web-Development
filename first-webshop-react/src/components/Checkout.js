@@ -2,9 +2,16 @@ import React from 'react'
 
 
 const Checkout = () => {
+
+    const style = {
+        fontFamily: 'Oswald, sanSerif', 
+    }
+
     return (
         <div>
-            <p>checkout</p>
+            <p style={style}>we're sorry but this store is not real, maybe you can fry your egg instead?</p>
+            <img src='./banksy.jpg'/>
+            
         </div>
     )
 }

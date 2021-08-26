@@ -11,18 +11,22 @@ import Login from './FirebaseRelated/Login'
 import PasswordReset from './FirebaseRelated/PasswordReset'
 import ProductDetail from './CartRelated/ProductDetail'
 import Checkout from './Checkout'
+import Footer from './Footer'
 import { connect } from 'react-redux'
-
+import './App.css'
 
 
 
 function App({ detail }) {
+
   return (
+
+
 
     <Router>
       <div className='App'>
         <Navbar />
-        <div className='contentNavbar'>
+        <div className='contentSwitch'>
           <Switch>
             <Route exact path='/' component={Homepage}>
             </Route>
@@ -49,6 +53,7 @@ function App({ detail }) {
             )}
           </Switch>
         </div>
+        <Footer />
       </div>
     </Router>
 

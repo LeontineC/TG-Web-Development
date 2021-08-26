@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { useHistory } from 'react-router'
 import { auth, db, logout } from '../Firebase'
+import './Dashboard.css'
 
 const Dashboard = () => {
 
@@ -19,13 +20,12 @@ const Dashboard = () => {
     return (
         <>
             <div className='dashboard'>
-                <div>you are logged in as
+                <div className='messageDash'>nice to see you!</div>
+                <div className='emailDash'>{user?.email}</div>
+                <button className='buttonLogout' onClick={logout}>
+                    logout
+                </button>
 
-                    <div>{user?.email}</div>
-                    <button className='dashboardButton' onClick={logout}>
-                        logout
-                    </button>
-                </div>
             </div>
 
         </>

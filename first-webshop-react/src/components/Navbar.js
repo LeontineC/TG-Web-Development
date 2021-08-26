@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
 
+
 import { connect } from 'react-redux'
+
 
 
 const Navbar = ({ cart }) => {
@@ -18,15 +20,18 @@ const Navbar = ({ cart }) => {
     }, [cart, cartCount]);
 
     return (
-        <nav className='navbar'>
-            <h1>The Naked Egg</h1>
+        <nav className='navbarContent'>
+            <div className='logoTitleNav'>
+                <img src='/egg.png' alt='logo' width='50px' />
+                <h1>The Naked Egg</h1>
+            </div>
 
-            <Link to='/' className='navLinks'>Home</Link>
-            <Link to='/ourstory' className='navLinks'>Our Story</Link>
-            <Link to='/productoverview' className='navLinks'>Our Products</Link>
-            <Link to='/cart' className='navLinks'>Basket<i className="ri-shopping-basket-line"></i></Link>
-            <div className='cartCounter'>{cartCount}</div>
-            <Link to='/login'><i className="ri-login-circle-line">Login</i></Link>
+            <Link to='/' className='homeNav navLinks'>Home</Link>
+            <Link to='/ourstory' className='storyNav navLinks'>Our Story</Link>
+            <Link to='/productoverview' className='productsNav navLinks'>Our Products</Link>
+            <Link to='/cart' className='basketNav navLinks'>Basket<i className="ri-shopping-basket-line"></i>&nbsp;{cartCount}</Link>
+            <Link to='/login' className='loginNav navLinks'>Login</Link>
+            
 
         </nav>
     )

@@ -3,6 +3,7 @@ import { useAuthState } from 'react-firebase-hooks/auth'
 import { useHistory } from 'react-router'
 import { Link } from 'react-router-dom'
 import { auth, sendPasswordResetEmail } from '../Firebase';
+import './PasswordReset.css'
 
 const PasswordReset = () => {
 
@@ -18,20 +19,22 @@ const PasswordReset = () => {
   return (
     <>
     <div className='passwordReset'>
+      <p>enter your email to receive a new password link</p>
     <input
           type='text'
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder='email'
+          className='inputReset'
         />
         <button
-          className='resetButton'
+          className='buttonReset'
           onClick={() => sendPasswordResetEmail(email)}
         >
-          send me a password reset email
+          send 
         </button>
         <div>
-          not yet a member? <Link to='/signup'>sign up</Link> now.
+          not yet a member? <Link to='/signup' className='linkFirebase'>sign up here</Link>
         </div>
     </div>
       
