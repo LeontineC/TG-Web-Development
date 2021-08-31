@@ -4,8 +4,6 @@
     margin: 1em;
     box-sizing: border-box;
     width: 20vw;
-    
-    
 }
 
 .hrPO {
@@ -19,18 +17,17 @@
 
 .buttonPO {
     border-radius: 5%;
-    background-color: white;
+    background-color: var(--color-primary);
     font-family: var(--font-secondary);
     color: var(--color-tertiary);
     font-size: var(--font-size-firebase-two);
     text-align: center;
     margin: .5em;
-    transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: var(--transition-buttons);
 }
 
 .buttonPO:hover {
     border-radius: 50%;
-
 }
 
 .imgPO {

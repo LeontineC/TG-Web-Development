@@ -8,7 +8,7 @@
         left: 0;
         right: 0;
         background: white;
-        
+        z-index: 10;
 }
 
 .logoTitleNav {
@@ -24,6 +24,10 @@
         color: black;
 }
 
+.ri-heart-line {
+        font-size: 30px;
+}
+
 .basketNav {
         display: flex;
         align-items: center;
@@ -34,6 +38,7 @@
         font-size: 25px;
         text-decoration: none;
         color: black;
+        transition: var(--transition-buttons);
 }
 
 .navLinks:hover {

@@ -1,0 +1,48 @@
+.pDContainer {
+        font-family: var(--font-primary);
+        font-size: 2em;
+        margin: 1em;
+        box-sizing: border-box;
+        width: 20vw;
+        background-color: rgb(200, 241, 167);
+        background-image: url('https://media.istockphoto.com/vectors/seamless-pattern-with-birds-in-cartoon-style-linear-art-doodle-vector-id1302157078?b=1&k=6&m=1302157078&s=170667a&w=0&h=fN3KcrsjiaIyqfEbfdhXtPuSXuCriKvy1PCd3Rfe7yo=');
+        overflow: hidden;
+        position: relative;
+}
+
+.pDContainer:hover {
+    width: 25vw;
+}
+
+.detailTitle {
+    margin-bottom: 1em;
+}
+
+.imgPD {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1em;
+    transition: transform ease 0.3s;
+    
+}
+
+.imgPD:hover {
+     transform: scale(1.2);
+    
+      }
+
+
+.buttonPD {
+    border-radius: 5%;
+    background-color: var(--color-primary);
+    font-family: var(--font-secondary);
+    color: var(--color-tertiary);
+    font-size: var(--font-size-firebase-two);
+    text-align: center;
+    margin: .5em;
+    transition: var(--transition-buttons);
+}
+
+.buttonPD:hover {
+    border-radius: 50%;
+}

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './Basket.css'
 
 import { connect } from 'react-redux'
 import { adjustItemQuantity, removeFromCart } from '../../Redux/Webshop/shop-actions'
@@ -13,21 +14,23 @@ const Basket = ({ item, removeFromCart, adjustQuantity }) => {
 
     return (
         <>
-            <div className='basketItems'>
+            <div className='basketContainer'>
                 <h3>{item.title}</h3>
                 <img src={item.image}
-                    width='200px'
-                    alt={item.alt} />
+                    // width='200px'
+                    alt={item.alt} 
+                    className='imgBasket'/>
                 <p>{item.description}</p>
                 <p>&euro; {item.price}</p>
             </div>
             <div className='quantity'>
                 <label htmlFor='qty'>quantity</label>
-                <input min='1' type='number' id='qty' name='qty' value={input} onChange={onChangeHandler} />
-            </div>
-            <button onClick={() => removeFromCart(item.id)}
+                <input min='1' type='number' id='qty' name='qty' className='inputBasket' value={input} onChange={onChangeHandler} />
+            
+            <button className='buttonBin' onClick={() => removeFromCart(item.id)}
             ><i className="ri-delete-bin-5-line"></i></button>
-
+            </div>
+            <hr className='hrBasket'/>
         </>
     )
 }

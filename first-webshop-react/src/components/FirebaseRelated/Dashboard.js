@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { useHistory } from 'react-router'
-import { auth, db, logout } from '../Firebase'
+import { auth, logout } from '../Firebase' // db
 import './Dashboard.css'
 
 const Dashboard = () => {

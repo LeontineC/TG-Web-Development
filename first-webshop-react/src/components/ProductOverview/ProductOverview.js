@@ -11,14 +11,14 @@ const ProductOverview = ({ items, addToCart, loadCurrentItem }) => {
 
 
     return (
-        <> 
-        
+        <>
+
             <div className='itemContainer'>
                 <h3>{items.title}</h3>
                 <img src={items.image}
                     // width='200px'
-                    alt={items.alt} 
-                    className='imgPO'/>
+                    alt={items.alt}
+                    className='imgPO' />
                 <p>{items.description}</p>
                 <p>&euro; {items.price}</p>
             </div>
@@ -30,9 +30,10 @@ const ProductOverview = ({ items, addToCart, loadCurrentItem }) => {
                         className='buttonPO'>a closer view</button>
                 </Link>
                 <button onClick={() => addToCart(items.id)} className='buttonPO'>add to basket</button>
+                {/* <button>add to favorites</button> */}
             </div>
-            <hr className='hrPO'/>
-           
+            <hr className='hrPO' />
+
         </>
     )
 }

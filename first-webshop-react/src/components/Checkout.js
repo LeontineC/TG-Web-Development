@@ -10,7 +10,7 @@ const Checkout = () => {
     return (
         <div>
             <p style={style}>we're sorry but this store is not real, maybe you can fry your egg instead?</p>
-            <img src='./banksy.jpg'/>
+            <img src='./banksy.jpg' alt='banksy chicken'/>
             
         </div>
     )

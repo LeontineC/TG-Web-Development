@@ -9,7 +9,7 @@ const Footer = () => {
                 <hr className='horizontal' />
                 <div className='footerContainer'>
                     <div className='row'>
-                        <div classname='column'>
+                        <div className='column'>
                             <p>Store Policy</p>
                             <ul className='list'>
                                 <a href='faq'><li className='policy'>FAQ</li></a>
@@ -17,7 +17,7 @@ const Footer = () => {
                                 <a href='returns'><li className='policy'>Returns</li></a>
                             </ul>
                         </div>
-                        <div classname='column'>
+                        <div className='column'>
                             <p>Follow Us</p>
                             <ul className='list'>
                                 <a href='facebook'><li><i className="ri-facebook-circle-line icons"></i></li></a>
@@ -26,7 +26,7 @@ const Footer = () => {
                                 <a href='whatsapp'><li><i className="ri-whatsapp-line icons"></i></li></a>
                             </ul>
                         </div>
-                        <div classname='column'>
+                        <div className='column'>
                             <p>Contact Us</p>
                             <ul className='list'>
                                 <li>thenakedegg@mail.com</li>
@@ -34,7 +34,7 @@ const Footer = () => {
                             </ul>
                         </div>
 
-                        <div classname='column'>
+                        <div className='column'>
                             <p>designed by LeonC</p>
                             <ul className='list'>
                                 <li>&copy;TheNakedEgg {new Date().getFullYear()}</li>
@@ -44,15 +44,7 @@ const Footer = () => {
 
                     </div>
                     <hr className='horizontal' />
-                    {/* <div className='row'> */}
-                        {/* <div class='columnBottom'> */}
-                            {/* <p>logo</p> */}
-                        {/* </div> */}
-                        {/* <div class='columnBottom'> */}
-                            {/* <p>&copy;TheNakedEgg {new Date().getFullYear()}</p> */}
-                        {/* </div> */}
-
-                    {/* </div> */}
+                    
                 </div>
             </div>
 

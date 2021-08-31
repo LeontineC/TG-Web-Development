@@ -30,6 +30,7 @@ const Navbar = ({ cart }) => {
             <Link to='/ourstory' className='storyNav navLinks'>Our Story</Link>
             <Link to='/productoverview' className='productsNav navLinks'>Our Products</Link>
             <Link to='/cart' className='basketNav navLinks'>Basket<i className="ri-shopping-basket-line"></i>&nbsp;{cartCount}</Link>
+           
             <Link to='/login' className='loginNav navLinks'>Login</Link>
             
 
