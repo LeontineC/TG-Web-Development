@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 import './ProductOverview.css'
 
 import { connect } from 'react-redux'
-import { addToCart, loadCurrentItem } from '../../Redux/Webshop/shop-actions'
+import { addToCart, loadCurrentItem, addToFavorites } from '../../Redux/Webshop/shop-actions'
 
-const ProductOverview = ({ items, addToCart, loadCurrentItem }) => {
+const ProductOverview = ({ items, addToCart, loadCurrentItem, addToFavorites }) => {
 
 
 
@@ -30,7 +30,7 @@ const ProductOverview = ({ items, addToCart, loadCurrentItem }) => {
                         className='buttonPO'>a closer view</button>
                 </Link>
                 <button onClick={() => addToCart(items.id)} className='buttonPO'>add to basket</button>
-                {/* <button>add to favorites</button> */}
+                <button onClick={() => addToFavorites(items.id)}>favorites</button>
             </div>
             <hr className='hrPO' />
 
@@ -41,7 +41,9 @@ const ProductOverview = ({ items, addToCart, loadCurrentItem }) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         addToCart: (id) => dispatch(addToCart(id)),
-        loadCurrentItem: (cartItem) => dispatch(loadCurrentItem(cartItem))
+        loadCurrentItem: (cartItem) => dispatch(loadCurrentItem(cartItem)),
+        addToFavorites: (id) => dispatch(addToFavorites(id))
+        
     }
 }
 

@@ -1,32 +1,28 @@
-/*import React, { useState } from 'react'
-import { connect } from 'react-redux'
-import { addToFavorites } from '../Redux/Webshop/shop-actions'
+import React from 'react'
+// import { connect } from 'react-redux'
+// import { addToFavorites, removeFromFavorites } from '../Redux/Webshop/shop-actions'
 
 const Favorites = () => {
-
-    const [heart, setHeart] = useState(0);
-
-   
+//  const[favorite, setFavorite] = useState(false)
+     
+    //   const handleClick = (id) => {
+        //   favorite === true ? 
+        //   setFavorite(id) : false
+    //   }
     return (
         <div>
-            
+           
         </div>
     )
 }
 
-const mapStateToProps = (state) => {
-    return {
-        
-       favorites: state.shop.favorites  
-    }
-}
+// const mapDispatchToProps = ( dispatch ) => {
+    // return {
+        // addToFavorites: (id) => dispatch(addToFavorites(id)),
+        // removeFromFavorites: (id) => dispatch(removeFromFavorites(id))
+    // }
+// }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        addToFavorites: (id) => dispatch(addToFavorites(id))
-    }
-}
+// export default connect(mapDispatchToProps)(Favorites)
 
-export default connect(mapStateToProps, mapDispatchToProps)(Favorites)
 
-*/

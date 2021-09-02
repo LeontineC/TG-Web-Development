@@ -6,6 +6,7 @@ const INITIAL_STATE = {
             id: 1,
             title: 'the Cloud',
             description: '100% merino wool',
+            text: 'Apples ducks straw, quail a ostriches donkey, hay hook cucumbers.uthouse at nails mower.',
             image: './thecloud.png',
             imageTwo: '../thecloud1.png',
             alt: 'knitted eggwarmer',
@@ -16,6 +17,7 @@ const INITIAL_STATE = {
             id: 2,
             title: 'the Woodland',
             description: '100% merino wool',
+            text: 'Sage mower goat, raccoons rhubarb outhouse a, apples berries corn.',
             image: './thewoodland.png',
             imageTwo: '../thewoodland1.png',
             alt: 'knitted egg warmer',
@@ -26,6 +28,7 @@ const INITIAL_STATE = {
             id: 3,
             title: 'the Charl',
             description: '100% shetland wool',
+            text: 'Brussel sprouts cow, rabbits a gates a, storage shed fences.',
             image: './thecharl.png',
             imageTwo: '../thecharl1.png',
             alt: 'knitted eggwarmer',
@@ -36,6 +39,7 @@ const INITIAL_STATE = {
             id: 4,
             title: 'the Dew',
             description: '100% angora wool',
+            text: 'Ewes mushrooms zucchini in forage Harvester at sheep with tractor.',
             image: './thedew.png',
             imageTwo: '../thedew1.png',
             alt: 'knitted eggwarmer',
@@ -46,6 +50,7 @@ const INITIAL_STATE = {
             id: 5,
             title: 'the Hare',
             description: '100% merino wool',
+            text: 'John Deere bees, parsley sweet corn at, porky pig shovels.',
             image: './thehare.png',
             imageTwo: '../thehare1.png',
             alt: 'felt eggwarmer',
@@ -56,6 +61,7 @@ const INITIAL_STATE = {
             id: 6,
             title: 'the Rabbit',
             description: '100% wool felt',
+            text: ' Grapes nest pitch fork an plows maple syrup yearlings, quilt squeak doggies.',
             image: './therabbit.png',
             imageTwo: '../therabbit1.png',
             alt: 'felt eggwarmer',
@@ -66,6 +72,7 @@ const INITIAL_STATE = {
             id: 7,
             title: 'the Basket',
             description: '100% wool',
+            text: 'Turkey daisys eggs squeal, horses moonshine apples raising Mooo tractor plow. ',
             image: './thebasket.png',
             imageTwo: '../thebasket1.png',
             alt: 'knitted eggwarmer',
@@ -76,6 +83,7 @@ const INITIAL_STATE = {
             id: 8,
             title: 'the Green Bird',
             description: '100% wool felt',
+            text: 'Blue berries pigeons buzz and bean prairie dogs nails at est.',
             image: './thegreenbird.png',
             imageTwo: '../thegreenbird1.png',
             alt: 'felt eggwarmer',
@@ -85,7 +93,8 @@ const INITIAL_STATE = {
     ],
     cart: [],
     currentItem: null,
-    // favorites: [],
+    favorites: [],  //
+    
 };
 
 const shopReducer = (state = INITIAL_STATE, action) => {
@@ -127,19 +136,26 @@ const shopReducer = (state = INITIAL_STATE, action) => {
                 currentItem: action.payload,
             }
 
-          /* case actionTypes.ADD_TO_FAVORITES:
-                   const favoritesItem = state.products.find(item => item.id === action.payload.id)
-                   const inFavorites = state.favorites.find((favoritesItem) => favoritesItem.id === action.payload.id ? true : false);
-               return {
-                 ...state, favourite: [...state.favourite, action.payload]
-               } 
-               
-               case actionTypes.REMOVE_FROM_FAVORITES:
-               return {
-                ...state,
+        
+
+        case actionTypes.ADD_TO_FAVORITES:
+            const favoritesItem = state.products.find(item => item.id === action.payload.id)
+            const inFavorites = state.favorites.find((favoriteItem) => favoriteItem.id === action.payload.id ? true : false);
+           
+            return {
+                ...state, //need to make list of favorites from cart items
+            //    favorites: action.payload, }
+            // favorites: inFavorites ? state.favorites.map((favoritesItem) => favoritesItem.id == action.payload.id :
+            // favoritesItem)
+            }
+
+        case actionTypes.REMOVE_FROM_FAVORITES:
+            return {
+                // ...state, favorites: action.payload, //need to remove from list of favorites
+                    ...state,
                 favorites: state.favorites.filter((favoritesItem) => favoritesItem.id !== action.payload.id)
-            } */
-               
+            }
+
 
 
         default:

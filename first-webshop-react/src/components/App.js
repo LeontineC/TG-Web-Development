@@ -11,6 +11,7 @@ import Login from './FirebaseRelated/Login'
 import PasswordReset from './FirebaseRelated/PasswordReset'
 import ProductDetail from './CartRelated/ProductDetail'
 import Checkout from './Checkout'
+
 import Footer from './Footer'
 import { connect } from 'react-redux'
 import './App.css'
@@ -46,6 +47,7 @@ function App({ detail }) {
             </Route>
             <Route exact path='/checkout' component={Checkout}>
             </Route>
+            
             {!detail ? (
               <Redirect to='/' component={Homepage} />
             ) : (

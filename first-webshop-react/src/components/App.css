@@ -1,7 +1,7 @@
 
 :root {
     --color-primary: rgb(255, 247, 225);
-    --color-secondary: rgb(236, 210, 131);
+    --color-secondary: rgb(248, 207, 131);
     --color-tertiary: black;
     --font-primary: 'Amatic SC', cursive;
     --font-secondary: 'Oswald', sans-serif;
@@ -16,9 +16,7 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
-    margin: 0;
-    padding: 0;
- }
+}
 
  .App { 
      display: flex;

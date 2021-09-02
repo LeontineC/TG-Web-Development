@@ -35,20 +35,20 @@ export const loadCurrentItem = (item) => {   //item with all its data
     }
 };
 
-/*export const addToFavorites = (itemID) => {
+
+
+export const addToFavorites = (item) => {   
     return {
         type: actionTypes.ADD_TO_FAVORITES,
-        payload: {
-            id: itemID
-        },
+        payload: item
+        // { id: item },
     }
 };
 
-export const removeFromFavorites = (itemID) => {
+export const removeFromFavorites = (item) => { 
     return {
         type: actionTypes.REMOVE_FROM_FAVORITES,
-        payload: {
-            id: itemID
-        },
+        payload: item
+        // {id: item}, 
     }
-}; */
+}; 
