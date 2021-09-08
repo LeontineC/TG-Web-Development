@@ -1,14 +1,11 @@
 import React from 'react'
-// import { connect } from 'react-redux'
-// import { addToFavorites, removeFromFavorites } from '../Redux/Webshop/shop-actions'
+import { connect } from 'react-redux'
+import { addToFavorites, removeFromFavorites } from '../Redux/Webshop/shop-actions'
 
 const Favorites = () => {
-//  const[favorite, setFavorite] = useState(false)
+ const[favorite, setFavorite] = useState()
      
-    //   const handleClick = (id) => {
-        //   favorite === true ? 
-        //   setFavorite(id) : false
-    //   }
+     
     return (
         <div>
            
@@ -16,13 +13,13 @@ const Favorites = () => {
     )
 }
 
-// const mapDispatchToProps = ( dispatch ) => {
-    // return {
-        // addToFavorites: (id) => dispatch(addToFavorites(id)),
-        // removeFromFavorites: (id) => dispatch(removeFromFavorites(id))
-    // }
-// }
+const mapDispatchToProps = ( dispatch ) => {
+    return {
+        addToFavorites: (itemID) => dispatch(addToFavorites(itemID)),
+        removeFromFavorites: (itemID) => dispatch(removeFromFavorites(itemID))
+    }
+}
 
-// export default connect(mapDispatchToProps)(Favorites)
+export default connect(null, mapDispatchToProps)(Favorites)
 
 

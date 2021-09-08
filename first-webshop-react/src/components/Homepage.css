@@ -85,10 +85,10 @@ span:nth-child(8) {
 .wordsHome {
     margin-top: 12vw;
     opacity: 0;
-    color: var(--color-primary);
+    color: rgb(255, 241, 203);
     text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
     0px 8px 13px rgba(247, 246, 237, 0.1), 0px 18px 23px var(--color-primary);
-    font-size: 2vw;
+    font-size: 2.5vw;
     transition: 4s linear;
     transition-delay: 10s;
 }

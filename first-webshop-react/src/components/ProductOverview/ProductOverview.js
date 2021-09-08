@@ -30,7 +30,7 @@ const ProductOverview = ({ items, addToCart, loadCurrentItem, addToFavorites }) 
                         className='buttonPO'>a closer view</button>
                 </Link>
                 <button onClick={() => addToCart(items.id)} className='buttonPO'>add to basket</button>
-                <button onClick={() => addToFavorites(items.id)}>favorites</button>
+                {/* <button onClick={() => addToFavorites(items.id)}>favorites</button> */}
             </div>
             <hr className='hrPO' />
 

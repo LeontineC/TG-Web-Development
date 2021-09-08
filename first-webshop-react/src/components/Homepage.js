@@ -36,7 +36,7 @@ const Homepage = () => {
                 </div>
 
                 <div className='wordsHome'>
-                    <h2>eggwarmers for your eggs, 100% wool, eggwarmers for your eggs, 100% wool</h2>
+                    <h2>eggwarmers for your eggs, 100% wool, from the isle of Shetland, lovingly knitted</h2>
                 </div>
 
             </div>

@@ -105,7 +105,7 @@ const shopReducer = (state = INITIAL_STATE, action) => {
 
             return {
                 ...state,    //spreading data to not lose products
-                cart: inCart ? state.cart.map((cartItem) =>  //if in cart map thru to finf id
+                cart: inCart ? state.cart.map((cartItem) =>  //if in cart map thru to find id
                     cartItem.id === action.payload.id
                         ? { ...cartItem, qty: cartItem.qty + 1 }   //qty is whatever it is plus 1
                         : cartItem)
@@ -139,22 +139,20 @@ const shopReducer = (state = INITIAL_STATE, action) => {
         
 
         case actionTypes.ADD_TO_FAVORITES:
-            const favoritesItem = state.products.find(item => item.id === action.payload.id)
-            const inFavorites = state.favorites.find((favoriteItem) => favoriteItem.id === action.payload.id ? true : false);
-           
-            return {
-                ...state, //need to make list of favorites from cart items
-            //    favorites: action.payload, }
-            // favorites: inFavorites ? state.favorites.map((favoritesItem) => favoritesItem.id == action.payload.id :
-            // favoritesItem)
-            }
+            const favoritesItem = state.cart.find(item => item.id === action.payload.id)
+            const inFavorites = state.favorites.find((favoritesItem) => favoritesItem.id === action.payload.id ? true : false); 
+            return {...state,
+               
+            favorites: action.payload, }
+               
+            
 
         case actionTypes.REMOVE_FROM_FAVORITES:
-            return {
-                // ...state, favorites: action.payload, //need to remove from list of favorites
-                    ...state,
-                favorites: state.favorites.filter((favoritesItem) => favoritesItem.id !== action.payload.id)
-            }
+            return {...state,
+            favorites: action.payload, }
+                
+                  
+            
 
 
 

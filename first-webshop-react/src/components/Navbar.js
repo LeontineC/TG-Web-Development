@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
+import Hamburger from './Hamburger'
 
 
 import { connect } from 'react-redux'
@@ -10,6 +11,7 @@ import { connect } from 'react-redux'
 const Navbar = ({ cart }) => {
 
     const [cartCount, setCartCount] = useState(0)
+    const [hamburgerOpen, setHamburgerOpen] = useState(false)
 
     useEffect(() => {
         let count = 0
@@ -19,7 +21,13 @@ const Navbar = ({ cart }) => {
         setCartCount(count)
     }, [cart, cartCount]);
 
+    const toggleHamburger = () => {
+        setHamburgerOpen(!hamburgerOpen)
+    }
+
     return (
+        <>
+       
         <nav className='navbarContent'>
             <div className='logoTitleNav'>
                 <img src='/egg.png' alt='logo' width='50px' />
@@ -32,9 +40,11 @@ const Navbar = ({ cart }) => {
             <Link to='/cart' className='basketNav navLinks'>Basket<i className="ri-shopping-basket-line"></i>&nbsp;{cartCount}</Link>
            
             <Link to='/login' className='loginNav navLinks'>Login</Link>
-            
-
         </nav>
+        <div className='hamburger' onClick={toggleHamburger}>
+            <Hamburger />
+        </div>
+        </>
     )
 }
 
